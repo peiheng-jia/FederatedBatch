@@ -7,7 +7,7 @@ This release is intentionally small. It contains the core FederatedBatch impleme
 ## Repository Layout
 
 ```text
-FederatedBatch-Paper/
+FederatedBatch/
 ├── src/                    # Python package: FederatedBatch, baselines, utilities
 ├── experiments/            # Minimal reproducible experiment scripts
 ├── scripts/                # Data and helper scripts
@@ -23,8 +23,8 @@ FederatedBatch-Paper/
 ## Installation
 
 ```bash
-git clone https://github.com/REPLACE_WITH_OWNER/FederatedBatch-Paper.git
-cd FederatedBatch-Paper
+git clone https://github.com/peiheng-jia/FederatedBatch.git
+cd FederatedBatch
 
 conda create -n federatedbatch python=3.10
 conda activate federatedbatch

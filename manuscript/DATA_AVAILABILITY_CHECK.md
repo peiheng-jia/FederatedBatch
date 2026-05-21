@@ -16,7 +16,7 @@
 
 **现有数据**:
 ```
-✅ FederatedBatch-Paper/results/comprehensive_evaluation_20260206_112951/
+✅ FederatedBatch/results/comprehensive_evaluation_20260206_112951/
    ✅ all_results.csv - 包含所有指标
    ✅ 4_Federated_MediumQueue/merged_embeddings.h5ad - FederatedBatch embeddings
    ✅ raw_data_viz/adata_raw_viz.h5ad - 原始数据
@@ -41,7 +41,7 @@
 
 #### Panel A - 雷达图
 ```
-✅ FederatedBatch-Paper/results/comprehensive_evaluation_20260206_112951/all_results.csv
+✅ FederatedBatch/results/comprehensive_evaluation_20260206_112951/all_results.csv
    包含：PCA, Centralized, Federated_NoQueue, Federated_SmallQueue, 
          Federated_MediumQueue, Federated_LargeQueue, Federated_DynamicQueue
 ```
@@ -206,7 +206,7 @@
 
 ```bash
 # 检查3-client实验数据
-ls -lh FederatedBatch-Paper/results/comprehensive_evaluation_20260206_112951/
+ls -lh FederatedBatch/results/comprehensive_evaluation_20260206_112951/
 
 # 检查消融实验数据
 ls -lh experiments/results/week15_ablation_*/
@@ -261,7 +261,7 @@ ls -lh experiments/results/week14_heldout_*/
 - 完成论文提交
 
 **长期（代码发布）**:
-- 慢慢整理FederatedBatch-Paper代码
+- 慢慢整理FederatedBatch代码
 - 确保可复现性
 - 发布到GitHub
 
@@ -275,7 +275,7 @@ ls -lh experiments/results/week14_heldout_*/
    - 不影响论文质量
 
 2. **第二步（论文提交后）**: 整理代码库
-   - 迁移核心代码到FederatedBatch-Paper
+   - 迁移核心代码到FederatedBatch
    - 确保可复现性
    - 准备GitHub发布
 

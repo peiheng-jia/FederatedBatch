@@ -14,7 +14,7 @@ setup(
     description="Federated Contrastive Learning for Single-Cell RNA-seq Batch Correction",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/REPLACE_WITH_OWNER/FederatedBatch-Paper",
+    url="https://github.com/peiheng-jia/FederatedBatch",
     packages=find_packages(where="src"),
     package_dir={"": "src"},
     classifiers=[

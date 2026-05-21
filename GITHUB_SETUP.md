@@ -69,7 +69,7 @@ git commit -m "Initial project commit"
 On GitHub:
 
 1. Go to https://github.com/new
-2. Repository name: `FederatedBatch-Paper`
+2. Repository name: `FederatedBatch`
 3. Choose Public or Private.
 4. Do not initialize with README, `.gitignore`, or license because this project already has them.
 5. Create repository.
@@ -79,7 +79,7 @@ On GitHub:
 Replace `YOUR_USERNAME` with your GitHub username or organization.
 
 ```powershell
-git remote add origin https://github.com/YOUR_USERNAME/FederatedBatch-Paper.git
+git remote add origin https://github.com/peiheng-jia/FederatedBatch.git
 git push -u origin main
 ```
 
