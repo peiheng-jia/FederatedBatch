@@ -1,0 +1,44 @@
+# Conda environment for R visualization
+# Usage: conda env create -f environment_r_viz.yml
+
+name: r_viz
+
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+
+dependencies:
+  # Python (for data preparation)
+  - python=3.9
+  - pip
+  
+  # Python packages for data preparation
+  - scanpy
+  - pandas
+  - numpy
+  - matplotlib
+  - seaborn
+  
+  # R and essential packages
+  - r-base=4.2
+  - r-essentials
+  
+  # R visualization packages
+  - r-ggplot2
+  - r-dplyr
+  - r-tidyr
+  - r-patchwork
+  - r-cowplot
+  - r-rcolorbrewer
+  - r-viridis
+  
+  # Additional useful R packages
+  - r-devtools
+  - r-reshape2
+  - r-scales
+  
+  # Jupyter support (optional, for interactive work)
+  - r-irkernel
+  - jupyter
+  - notebook
