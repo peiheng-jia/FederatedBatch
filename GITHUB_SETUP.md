@@ -24,7 +24,6 @@ Recommended to include:
 - `experiments/`
 - `scripts/`
 - `visualization/`
-- `manuscript/`
 - `docs/`
 - `MANUSCRIPT_FIGURE_TEXTS/`
 - `README.md`

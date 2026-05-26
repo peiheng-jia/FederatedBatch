@@ -2,7 +2,7 @@
 
 Minimal release repository for the FederatedBatch paper: federated contrastive learning for single-cell RNA-seq batch correction.
 
-This release is intentionally small. It contains the core FederatedBatch implementation, a reproducible main experiment entry point, data download instructions, and manuscript text. Raw datasets, trained checkpoints, generated result folders, and figure outputs are excluded from Git.
+This release is intentionally small. It contains the core FederatedBatch implementation, a reproducible main experiment entry point, and data download instructions. Raw datasets, trained checkpoints, generated result folders, and figure outputs are excluded from Git.
 
 ## Repository Layout
 
@@ -11,7 +11,6 @@ FederatedBatch/
 ├── src/                    # Python package: FederatedBatch, baselines, utilities
 ├── experiments/            # Minimal reproducible experiment scripts
 ├── scripts/                # Data and helper scripts
-├── manuscript/             # Manuscript markdown files
 ├── data/                   # Data README only; raw data are not tracked
 ├── results/                # Result README only; generated outputs are not tracked
 ├── requirements.txt
@@ -89,7 +88,7 @@ python experiments/run_main.py --data data/pancreas.h5ad --output results/quick 
 - The main release path is `experiments/run_main.py`.
 - The default main experiment reports PCA, Harmony when available, and FederatedBatch.
 - External CONCORD is required only for the optional centralized CONCORD wrapper; the minimal FederatedBatch implementation lives in `src/federatedbatch`.
-- For exact paper numbers, use the same data preprocessing, seeds, and hardware reported in the manuscript.
+- For exact paper numbers, use the same data preprocessing, seeds, and hardware as the original experiments.
 
 ## Citation
 
