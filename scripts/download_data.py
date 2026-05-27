@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Download public datasets used by the FederatedBatch release."""
+"""Download a small public pancreas dataset for FederatedBatch smoke tests."""
 
 from __future__ import annotations
 
@@ -34,7 +34,7 @@ def download_pancreas(output_dir: Path) -> Path:
         print(f"Data already exists: {output_path}")
         return output_path
 
-    print("Downloading pancreas dataset with scanpy.datasets.pancreas()")
+    print("Downloading smoke-test pancreas dataset with scanpy.datasets.pancreas()")
     adata = sc.datasets.pancreas()
     adata = standardize_obs(adata)
     adata.write_h5ad(output_path)

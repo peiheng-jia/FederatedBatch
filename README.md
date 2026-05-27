@@ -45,7 +45,15 @@ $env:PYTHONPATH="C:\path\to\Concord-main\src;$env:PYTHONPATH"
 
 ## Data
 
-Raw `.h5ad` datasets are not tracked in Git. Download the pancreas dataset with:
+Raw `.h5ad` datasets are not tracked in Git. The benchmark datasets used in the paper were downloaded from the scIB dataset collection released with Luecken et al., *Benchmarking atlas-level data integration in single-cell genomics*:
+
+```text
+https://figshare.com/articles/dataset/Benchmarking_atlas-level_data_integration_in_single-cell_genomics_-_integration_task_datasets/12420968
+```
+
+The paper experiments use the Pancreas, Human Immune, and Human Lung atlas integration datasets from this collection. Place downloaded `.h5ad` files under `data/` and pass the selected file to the main experiment with `--data`.
+
+The repository also includes a small helper for downloading the public Scanpy pancreas dataset as a smoke-test input:
 
 ```bash
 python scripts/download_data.py --dataset pancreas --output data
