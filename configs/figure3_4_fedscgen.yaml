@@ -1,0 +1,49 @@
+schema_version: 1
+protocol: official_fedscgen_canonical7_final_figure3_4_v1
+seed: 218
+device: cuda:0
+data_dir: data
+output_dir: results/runs
+
+upstream:
+  path: baselines/fedscgen/upstream
+  commit: b266f744fcc0d97ac0db25f00316b6a080929d0a
+  patch: baselines/fedscgen/patches/single_machine.patch
+
+preprocessing:
+  multi_dataset:
+    n_hvg: 2000
+    hvg_flavor: seurat_v3
+    normalize_target_sum: 10000
+    log1p: true
+  lobo:
+    n_hvg: 2000
+    hvg_flavor: seurat_v3
+    normalize_target_sum: 10000
+    log1p: true
+
+training:
+  n_clients: 3
+  n_rounds: 8
+  local_epochs: 2
+  batch_size: 50
+  learning_rate: 0.001
+  hidden_layer_sizes: [800, 800]
+  latent_dim: 10
+  dropout: 0.05
+  aggregation: fedavg
+  early_stopping:
+    early_stopping_metric: val_loss
+    patience: 20
+    threshold: 0
+    reduce_lr: true
+    lr_patience: 13
+    lr_factor: 0.1
+
+evaluation:
+  n_neighbors: 15
+  leiden_resolution: 1.0
+  save_embeddings: true
+
+lobo:
+  correction_communication_rounds: 2

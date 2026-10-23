@@ -1,0 +1,14 @@
+FedscGen upstream source provenance
+
+Recorded upstream commit: b266f744fcc0d97ac0db25f00316b6a080929d0a
+Source location in this release: baselines/fedscgen/upstream/
+Local patch: baselines/fedscgen/patches/single_machine.patch
+Adapter: baselines/fedscgen/official_adapter.py
+
+The source was compared with the GitHub tree for the recorded commit on
+23 October 2026. LICENSE, NOTICE, FedScGen.py, __init__.py, plots.py, and
+r_utils.py match their upstream Git blobs. The only Python differences are in
+scgen_utils.py and utils.py and exactly match the recorded single_machine.patch.
+The upstream BSD-3-Clause component license is retained under upstream/licenses/.
+Checksums and upstream blob identifiers are recorded in upstream-source-manifest.json.
+This directory is a checksummed vendored snapshot, not a Git submodule.

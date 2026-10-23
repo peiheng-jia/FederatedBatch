@@ -1,0 +1,55 @@
+{
+  "collection": {
+    "name": "scIB integration task datasets",
+    "doi": "10.6084/m9.figshare.12420968",
+    "url": "https://figshare.com/articles/dataset/Benchmarking_atlas-level_data_integration_in_single-cell_genomics_-_integration_task_datasets/12420968",
+    "article_id": 12420968,
+    "license": "CC-BY-4.0",
+    "artifact_pinning": "Each downloaded artifact is pinned below by provider filename, byte size, MD5 and SHA-256; analyses do not accept a file based on the mutable article landing page alone.",
+    "note": "Figshare may require an interactive browser challenge; the preparation script stages and verifies manually downloaded files."
+  },
+  "datasets": {
+    "pancreas": {
+      "filename": "pancreas.h5ad",
+      "size_bytes": 315955785,
+      "sha256": "97e6dfd65553e4d10aa3ef5d904362970a75c677c31d70fabc9234191a09db8c",
+      "md5": "5aa155652b998c90395a0c9bd731b4b3",
+      "n_cells": 16382,
+      "n_batches": 9,
+      "n_cell_types": 14,
+      "input_layer": "counts",
+      "batch_key": "batch",
+      "batch_fallbacks": ["tech"],
+      "cell_type_key": "celltype",
+      "cell_type_fallbacks": ["cell_type"]
+    },
+    "immune": {
+      "filename": "Immune_ALL_human.h5ad",
+      "size_bytes": 2064748344,
+      "sha256": "96709b5fa677d5eafc734793a7873a2c763453ba8abddad24c0fba39e0d7f2c8",
+      "md5": "482a6a3117432d41a46effd8376b8ee0",
+      "n_cells": 33506,
+      "n_batches": 10,
+      "n_cell_types": 16,
+      "input_layer": "counts",
+      "batch_key": "batch",
+      "batch_fallbacks": ["sample", "donor", "study"],
+      "cell_type_key": "final_annotation",
+      "cell_type_fallbacks": ["celltype", "cell_type"]
+    },
+    "lung": {
+      "filename": "Lung_atlas_public.h5ad",
+      "size_bytes": 1019664664,
+      "sha256": "623f84435efdce9af31fc2be393ae7d2dfcf427414567b2fd994ea7422f5feeb",
+      "md5": "aac0832c3e3413ae279343f5de02a2c6",
+      "n_cells": 32472,
+      "n_batches": 16,
+      "n_cell_types": 17,
+      "input_layer": "counts",
+      "batch_key": "batch",
+      "batch_fallbacks": ["sample", "donor", "study"],
+      "cell_type_key": "cell_type",
+      "cell_type_fallbacks": ["celltype", "final_annotation"]
+    }
+  }
+}

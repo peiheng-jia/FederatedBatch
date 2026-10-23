@@ -1,0 +1,42 @@
+schema_version: 1
+protocol: corrected_multi_dataset
+seed: 42
+device: auto
+data_dir: data
+output_dir: results/runs
+dataset: pancreas
+
+preprocessing:
+  n_hvg: 2000
+  hvg_flavor: seurat_v3
+  normalize_target_sum: 10000
+  log1p: true
+
+federated:
+  n_clients: 3
+  n_rounds: 20
+  local_epochs: 5
+  batch_size: 128
+  learning_rate: 0.001
+  temperature: 0.07
+  hard_negative_beta: 1.0
+  latent_dim: 100
+  encoder_dims: [128]
+  dropout: 0.1
+  queue:
+    enabled: false
+    mode: cross_client_soft
+    size: 1000
+    samples_per_client: 100
+    weight: 1.0
+    temperature: 0.2
+    cross_client_only: true
+    collection: after_fedavg_with_aggregated_encoder
+
+centralized:
+  epochs: 100
+
+evaluation:
+  n_neighbors: 15
+  leiden_resolution: 1.0
+  save_embeddings: true

@@ -1,0 +1,14 @@
+{
+  "fedscgen_rows": 126,
+  "outputs": [
+    "FIGURE4_FIX_REPORT.md",
+    "FIGURE4_BEFORE_AFTER.csv",
+    "FIGURE4_PAIRED_TESTS.csv",
+    "Figure4_revised.pdf",
+    "Figure4_revised.svg",
+    "Figure4_revised.png"
+  ],
+  "scenarios": 63,
+  "status": "complete",
+  "training_called": false
+}

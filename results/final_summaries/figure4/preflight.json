@@ -1,0 +1,24 @@
+{
+  "cell_order_match": true,
+  "checkpoint_loaded": true,
+  "checkpoint_path": "/mnt/h/code/FedCONCORD/FederatedBatch-FreshQueueDoseResponse/results/final_figure4_canonical7/training/fedscgen/seed_218/celseq/trained_model/model_params.pt",
+  "checkpoint_sha256": "fbfc21ccf53b53c957997c6083d81e4f504d946dcde9f22d18722fcfcc7cbc25",
+  "correction_seconds": 0.7316638212651014,
+  "correction_workflow_inference": true,
+  "data_path": "/mnt/h/code/FedCONCORD/FederatedBatch-Reproducibility/data/pancreas.h5ad",
+  "embedding_shape": [
+    1004,
+    10
+  ],
+  "gene_order_match": true,
+  "held_out_batch": "celseq",
+  "matrix_allclose_atol": 1e-07,
+  "matrix_allclose_rtol": 1e-06,
+  "matrix_max_abs_difference": 0.0,
+  "n_cells": 1004,
+  "n_genes": 2000,
+  "status": "PASS",
+  "training_called": false,
+  "training_seed": 218,
+  "without_correction_inference": true
+}
