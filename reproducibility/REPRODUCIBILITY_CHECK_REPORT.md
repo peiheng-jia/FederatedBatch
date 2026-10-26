@@ -25,7 +25,7 @@ privacy attack, or SPU computation was run. Manuscript baselines were unchanged.
 - Remaining old project locations occur only as provenance/source-history strings or in standalone legacy Figure 1 recomputation copies. Those old copies target obsolete data/seed layouts and are not documented as current commands. They are not loaded by the result renderers.
 - Figure 3 UMAP coordinates are bundled. Figure 1's fixed PCA cache, features, and source rows are bundled as documented in `artifact_manifest.tsv`.
 - No `.venvs`, temporary logs, pilot/debug files, or release-tracked files larger than 100 MB were found. Local interpreter caches remain excluded by `.gitignore`; they were not added to the integration changes.
-- The baseline public commit contains 218 files. Cache bytecode, the duplicate `third_party/FedScGen/` tree, legacy Figure 2 run artifacts, obsolete Figure 1 previews, and unmanifested historical outputs remain excluded by ignore rules. New integration files are intentionally uncommitted pending review.
+- The baseline public commit contains 218 files. Cache bytecode, the duplicate `third_party/FedScGen/` tree, legacy Figure 2 run artifacts, obsolete Figure 1 previews, and unmanifested historical outputs remain excluded by ignore rules. The publication integration has been committed and pushed to `release-federatedbatch-2026` in GitHub PR #1; the remote `main` branch is unchanged.
 - Figures 1-4 now have repository-local staged experiment chains. Figure 3/4 commands select only the requested figure, and finalization uses the final statistical families without obsolete renderers. Figure 5 has separate explicit-comparator preparation/training, parameterized release attacks/reconstruction, accounting, SPU inputs and assembly; fresh attacks and SPU remain runtime-unverified.
 - Figure 2 renderer annotations now read Holm-adjusted p values from the selected statistics CSV instead of embedding locked manuscript p values in source.
 - Figure 5 analytic accounting reproduced the bundled epsilon grid exactly in a temporary test (`sigma=2`, `delta=1e-5`: `epsilon=1.9930914044151202`). The plot-input assembler completed against bundled inputs in `/tmp`; neither test changed manuscript artifacts.
@@ -67,7 +67,7 @@ privacy attack, or SPU computation was run. Manuscript baselines were unchanged.
 - Figure 2 saved-input rendering passed. Clean-checkout rendering, real-data Figure 1-4 workflows, fresh privacy attacks, R rendering and SPU execution remain unverified.
 - Figure 1A and Figure 4A need author-provided panels. Figure 4 B/C use the bundled preprocessing-fixed results. WSL has Rscript, but `ggplot2`, `dplyr`, and `cowplot` are absent.
 - The release is not end-to-end reproducible from a clean checkout until data retrieval and supported native, FedscGen, R, and SPU environments pass runtime smoke tests. Figure 1A and Figure 4A still require author-provided assets.
-- Baseline commit `66ae21ce3b7af4f4a35cbc355649a9ec697cd358` exists; the present integration changes are uncommitted. No GitHub remote release/tag or Zenodo DOI exists.
+- The original release-candidate baseline commit is `66ae21ce3b7af4f4a35cbc355649a9ec697cd358`. The integrated release branch is pushed to GitHub as PR #1 (`release-federatedbatch-2026`, opened against `main`); it has not been merged. No GitHub Release/tag or Zenodo DOI has been created.
 
 ## Status summary
 
@@ -86,7 +86,7 @@ privacy attack, or SPU computation was run. Manuscript baselines were unchanged.
 | Data-preparation safety | PASS, 8 synthetic tests; live metadata request blocked by HTTP 403 |
 | Real-data training/inference/evaluation | NOT RUN; release inputs not staged and clean environments unvalidated |
 | End-to-end reproduction | NOT VERIFIED |
-| Git release candidate | Baseline commit exists; integration changes uncommitted |
-| GitHub/Zenodo publication readiness | SOURCE COMMIT CANDIDATE; ARCHIVAL REPRODUCTION NOT READY |
+| Git release candidate | Integrated release branch committed and pushed; PR #1 remains open |
+| GitHub/Zenodo publication readiness | GitHub PR open; no merged release, GitHub Release or Zenodo DOI; clean-environment reproduction unverified |
 
 Static success is not a claim of end-to-end reproduction.
