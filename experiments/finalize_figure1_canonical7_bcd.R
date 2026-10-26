@@ -11,8 +11,16 @@ suppressPackageStartupMessages({
 
 source("external_artifacts/figure1/figures/figure1/r/color_config.R")
 
-input_dir <- "results/figure1_canonical7_final_private"
-output_dir <- "results/final_figure1_canonical7"
+args <- commandArgs(trailingOnly = TRUE)
+argument_value <- function(flag, default) {
+  position <- match(flag, args)
+  if (is.na(position)) return(default)
+  if (position == length(args)) stop(sprintf("%s requires a value", flag))
+  args[[position + 1]]
+}
+
+input_dir <- argument_value("--input", "results/reproduction/figure1")
+output_dir <- argument_value("--output", "figures/reproduction/figure1")
 dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
 
 raw_file <- file.path(input_dir, "figure1B_source_values_canonical7.csv")

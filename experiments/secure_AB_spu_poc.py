@@ -819,12 +819,21 @@ def communication_row(case: str, completed: bool, reason: str) -> dict[str, Any]
 
 
 def main() -> None:
+    global EMBEDDING, PARTITION, SCHEDULE, OUTPUT
     parser = argparse.ArgumentParser()
     parser.add_argument("--repetitions", type=int, default=3)
     parser.add_argument("--small-only", action="store_true")
     parser.add_argument("--small-timeout-seconds", type=float, default=300.0)
     parser.add_argument("--full-timeout-seconds", type=float, default=900.0)
+    parser.add_argument("--embedding", type=Path, default=EMBEDDING)
+    parser.add_argument("--partition", type=Path, default=PARTITION)
+    parser.add_argument("--schedule", type=Path, default=SCHEDULE)
+    parser.add_argument("--output", type=Path, default=OUTPUT)
     args = parser.parse_args()
+    EMBEDDING = args.embedding.resolve()
+    PARTITION = args.partition.resolve()
+    SCHEDULE = args.schedule.resolve()
+    OUTPUT = args.output.resolve()
     if args.repetitions < 1:
         raise ValueError("repetitions must be positive")
     for path in (EMBEDDING, PARTITION, SCHEDULE):

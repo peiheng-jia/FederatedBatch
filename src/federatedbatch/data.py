@@ -36,7 +36,7 @@ def verify_dataset_file(name: str, path: Path, verify_hash: bool = True) -> None
     metadata = dataset_metadata(name)
     if not path.exists():
         raise FileNotFoundError(
-            f"dataset not found: {path}. Run scripts/prepare_data.py before the experiment."
+            f"dataset not found: {path}. Run scripts/prepare/prepare_data.py before the experiment."
         )
     actual_size = path.stat().st_size
     if actual_size != metadata["size_bytes"]:

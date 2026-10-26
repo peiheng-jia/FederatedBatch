@@ -1,77 +1,134 @@
 # FederatedBatch
 
-Code and compact results for **FederatedBatch: Federated Contrastive Learning for Privacy-Preserving Single-Cell Batch Correction**. This directory is a publication release candidate. It has not been verified by a clean-checkout end-to-end reproduction. Raw datasets, model checkpoints, and full embeddings are not included.
+FederatedBatch learns a shared single-cell representation using local
+CONCORD training, FedAvg, and cross-client contrastive interaction. This
+repository contains the implementation, baseline adapters, experiment scripts,
+and saved tables/plotting inputs for the FederatedBatch manuscript.
+The output is a latent embedding, not a corrected gene-expression matrix.
 
-## Contents
+## Installation
 
-- `src/`: FederatedBatch and vendored CONCORD implementation.
-- `baselines/`: FedscGen adapter and the authoritative checksummed source snapshot; see `THIRD_PARTY_LICENSES.md`.
-- `configs/`: protocol records. Figure 2 YAML files are metadata, not runnable training configurations.
-- `data/`: dataset manifest and staging instructions.
-- `experiments/`: experiment, analysis, and legacy helper scripts.
-- `results/final_summaries/`: compact final tables and provenance.
-- `results/plot_inputs/`: saved plotting inputs, including Figure 3 UMAP coordinates.
-- `figures/final/`: curated final figure exports. Figure 1A and Figure 4A are author-managed and are not included.
-- `reproducibility/`: artifact manifests, dependency inventory, and release audits.
-
-## Environment
-
-Environment specifications are provided in `environment/`, `environment.yml`, and `environment-fedscgen.yml`. They have not been validated from a clean public checkout. Native training requires a compatible Python/PyTorch stack and CUDA for the recorded environment. FedscGen, R rendering, and SecretFlow/SPU use separate dependencies; see `reproducibility/EXTERNAL_DEPENDENCIES.md`.
+Run commands from the repository root. The native environment specifies
+Python 3.10.13, PyTorch 2.1.2 and CUDA 11.8; Python dependencies are listed in
+`pyproject.toml`. The small example below runs on CPU.
 
 ```bash
 conda env create -f environment/federatedbatch.yml
 conda activate federatedbatch
-pip install -e .
+python -m pip install -e .
 ```
 
-## Data
+FedscGen has a separate environment (`environment/fedscgen.yml`). Figure 1
+rendering uses R with `ggplot2`, `dplyr` and `cowplot`; Figure 5 secure-computation
+experiments require a separate SecretFlow-SPU/JAX environment. Clean installation
+of all environments has not been verified. See the [environment notes](reproducibility/EXTERNAL_DEPENDENCIES.md).
 
-The Pancreas, Immune, and Lung processed datasets are registered in `data/datasets.json` with the listed Figshare DOI, filenames, dimensions, annotation keys, sizes, and hashes. Download and stage them according to `data/README.md`. The `.h5ad` files are not included.
+The paper commands for Figures 3-5 are written for Bash (including WSL on
+Windows), not PowerShell. The minimal CPU example is independent of those shell
+snippets and does not require Git metadata or a GPU.
 
-## Final protocol
+## Data download
 
-The canonical training seeds are `218, 394, 542, 639, 788, 814, 880`. FederatedBatch uses 20 communication rounds, five local epochs, batch size 128, learning rate 0.001, RoundOnce remote A/B interaction in rounds 4–20, 102 unique remote cells per source and active round, one-time participation, Joint-C50 clipping (`C=1206.3391650512762`), `sigma=2`, `tau_q=0.20`, and `alpha=0.10`. The formal cell-level DP guarantee applies only to the cross-client A/B release channel, not to end-to-end federated training.
+Download the following processed scIB datasets from the
+[official Figshare collection](https://doi.org/10.6084/m9.figshare.12420968).
+Large datasets and checkpoints are not included in Git.
 
-Figure 2 compares NoQueue, Remote A/B (`sigma=0`), and FederatedBatch. Figure 3 PCA statistics summarize seven seed-specific evaluations as mean ± SD. Figure 4 uses the preprocessing-fixed result set and contains automated panels B/C; panel A is author-managed. The old Figure 4D is not part of the final figure.
+| Dataset | Required filename in `data/` | Cells / batches / cell types |
+|---|---|---|
+| Pancreas | `pancreas.h5ad` | 16382 / 9 / 14 |
+| Immune | `Immune_ALL_human.h5ad` | 33506 / 10 / 16 |
+| Lung | `Lung_atlas_public.h5ad` | 32472 / 16 / 17 |
 
-## Result redraws
-
-The commands below match the renderer CLI options. WSL static checks confirmed each renderer's `--help`; no redraw command was run, so successful rendering is not claimed.
-
-Figure 2:
+For browser-downloaded files:
 
 ```bash
-python scripts/render/render_figure2_result_only.py --input results/final_summaries/figure2 --output figures/redraw/figure2
+python scripts/prepare/prepare_data.py --source-dir /path/to/downloads --dataset all
+python scripts/prepare/prepare_data.py --verify-only --dataset all
 ```
 
-Figure 3 loads the bundled representative-seed coordinate tables from `results/plot_inputs/figure3/` by default and does not recompute UMAP:
+Alternatively, `python scripts/prepare/download_data.py --dataset all` resolves
+the exact provider filenames and verifies downloads. The API returned HTTP 403
+in our environment; use the browser route if blocked. Filenames, byte sizes
+and SHA-256 hashes are recorded in `data/datasets.json`. See [data instructions](data/README.md)
+for verification and source limitations; do not substitute another atlas version.
+
+## Preprocessing
+
+The paper loaders restore `layers['counts']`, harmonize batch/cell-type labels,
+and use 2,000 HVGs with library-size normalization (`target_sum=10000`) and
+`log1p`. Normalization is applied across the full gene set before subsetting
+model features. Figure 1 uses its saved feature list and fixed partition;
+Figure 4 determines HVGs from training batches and applies the corrected
+full-gene normalization to held-out data before selecting those HVGs.
+The scripts perform these steps; do not normalize the downloaded files again
+before passing them to a paper experiment.
+
+## Quick start
+
+```bash
+python examples/minimal.py
+```
+
+This example creates a small count-like AnnData input (64 cells, 24 genes,
+two batches), runs two CPU communication rounds through the existing
+`train_federated` function with private RoundOnce A/B interaction, saves the
+embedding/checkpoint, and checks inference after loading the checkpoint.
+No dataset download or cell-type labels are required. Outputs are under
+`results/runs/minimal/`: `embedding.h5ad` contains
+`obsm['X_federatedbatch']`, `model.pt` holds the model, and `config.yaml`
+records the example settings. Choose a new `--output` directory to run again.
+
+To try a small custom `.h5ad`:
+
+```bash
+python examples/minimal.py --input /path/to/small_counts.h5ad --output results/runs/custom
+```
+
+Use unnormalized count-like `X` or `layers['counts']`, unique cell/gene names,
+and `obs['batch']` with at least two batches and eight cells per batch. The
+example uses all supplied genes and reduced model/training settings. It is a
+usage demonstration, not a paper benchmark or a validation of the paper's
+privacy budget. It simulates clients in one process.
+
+The example passed in the existing WSL Ubuntu environment (Python 3.10.13,
+PyTorch 2.1.2), including private A/B interaction and checkpoint reload.
+This is a lightweight usage check, not a clean-environment paper reproduction.
+
+## Paper results
+
+The direct experiment, summary and plotting commands for Figures 1-5 are in
+[paper reproduction commands](reproducibility/REPRODUCTION_COMMANDS_AND_LOCAL_SOURCES.md).
+They reuse the existing scripts/configurations; no workflow dispatcher is
+required. Full paper runs use seeds `218, 394, 542, 639, 788, 814, 880` and
+can be expensive. New outputs go under `results/reproduction/`.
+
+For example, redraw Figure 3 from the saved metrics and UMAP coordinates:
 
 ```bash
 python scripts/render/render_figure3_publication.py --input results/final_summaries/figure3 --output figures/redraw/figure3
 ```
 
-Figure 4 panels B/C:
+Saved-result redraws do not rerun experiments. Figure 3 PCA statistics retain
+seven seed-specific evaluations. Figure 4 uses the preprocessing-fixed results
+and has A/B/C only; Figure 1A and Figure 4A are author-managed schematic panels.
 
-```bash
-python scripts/render/render_figure4_preprocessing_fixed_redesign.py --input results/final_summaries/figure4 --output figures/redraw/figure4
-```
+Known limitations: the CPU example and existing component checks do not
+establish a clean-environment, seven-seed reproduction. Public data retrieval,
+fresh privacy attacks, the R renderer and the SPU environment still need
+independent runtime validation. The ABY3 experiment is a local three-party
+proof of concept, not a multi-institution WAN benchmark. Formal cell-level DP
+applies only to the cross-client A/B release channel, not end-to-end federated
+training or the final model.
 
-Figure 5:
+## Citation
 
-```bash
-python scripts/render/make_figure5_variants.py --input results/plot_inputs/figure5 --output figures/redraw/figure5
-```
+Use [CITATION.cff](CITATION.cff) for the software authors and manuscript title.
+Please also cite CONCORD and, when using its baseline, FedscGen; source links
+and the FedscGen publication DOI are in [third-party notices](THIRD_PARTY_LICENSES.md).
+No code-archive DOI is currently registered.
 
-There is no verified release redraw command for Figure 1. Figure 1 training/evaluation and Figures 2–5 fresh experiment workflows are not confirmed as self-contained in this release copy. Figure 4 checkpoint-only re-evaluation requires external data and checkpoints; it is not required for the bundled corrected summary redraw.
+## License
 
-## Limitations
-
-- Clean-checkout end-to-end reproduction is **NOT VERIFIED**. Static parsing, package imports, path/CLI checks, and renderer help do not execute model workflows.
-- Datasets, checkpoints, full embeddings, and some attack/MPC intermediate artifacts are external. Public stable download locations for required checkpoints are not established.
-- Figure 1A and Figure 4A are author-provided schematic panels and are not included because no final file path or editable source is registered in the experiment project. Figure 1 training needs the staged Pancreas dataset and a compatible runtime.
-- Interpreter caches may remain in this working copy because deletion was blocked by the environment. `.gitignore` and the release manifest exclude caches, virtual environments, temporary logs, and non-final artifacts.
-- A GitHub repository, release commit/tag, and Zenodo DOI have not been created.
-
-## Citation and licenses
-
-Use `CITATION.cff` for the manuscript citation. CONCORD and FedscGen attribution and license notices are retained. Review `THIRD_PARTY_LICENSES.md` and `reproducibility/GITHUB_ZENODO_RELEASE_CHECKLIST.md` before publication.
+FederatedBatch is distributed under the [MIT License](LICENSE). CONCORD's MIT
+notice and FedscGen's Apache-2.0/BSD-3-Clause notices, attribution and local
+patch records are retained; see [THIRD_PARTY_LICENSES.md](THIRD_PARTY_LICENSES.md).

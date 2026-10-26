@@ -2,6 +2,9 @@ release_path	original_role	adaptation	verification
 src/federatedbatch/	FederatedBatch native implementation	Copied into release tree; imports use package root	Static source copy
 src/concord/	CONCORD backend	Vendored with license retained	Static source copy
 baselines/fedscgen/upstream/	Official FedscGen source	Checksummed snapshot of commit b266f744 plus the recorded single-machine compatibility patch	Unmodified Git blobs matched upstream; two modified Python files exactly match single_machine.patch
-experiments/	Figure drivers and analysis scripts	Copied; several historical helpers still require external artifacts	Static syntax/path audit pending
+experiments/	Figure drivers and analysis scripts	Copied and adapted with repository-local Figure 1-4 outputs and independent Figure 3/4 selection; historical helpers outside current commands	AST/CLI and wiring tests passed; canonical real-data workflows not run
+scripts/prepare/download_data.py	Figshare data acquisition	Exact-name/size/MD5 API checks; metadata-only mode; verified atomic payload publication	Synthetic safety tests and CLI passed; live metadata HTTP 403; payload download not run
+scripts/prepare/prepare_data.py	Exact-artifact staging	Verify source and temporary copy before publication; protect existing invalid files	Synthetic safety tests passed; three historical inputs separately size/SHA-256 verified
 results/final_summaries/	Final compact result tables	Copied from accepted canonical-seven outputs	File presence and schema checked
 figures/final/	Manuscript figure outputs	Stable public filenames; Figure 1A and Figure 4A author-managed	Copied outputs; no redraw run
+baselines/fedscgen/official_adapter.py	Pinned FedscGen adapter	Release-local source validation and upstream package-path setup	Synthetic training/checkpoint/direct inference/correction passed; upstream tree unmodified

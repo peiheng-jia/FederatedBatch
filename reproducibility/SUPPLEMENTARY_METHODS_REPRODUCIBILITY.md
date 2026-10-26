@@ -23,8 +23,10 @@ expression reconstruction, analytic DP accounting, and a local SecretFlow-SPU /
 ABY3 PoC.
 
 The compact tables and plot inputs are bundled, but a clean-checkout end-to-end
-reproduction is **not verified**. Fresh runs require the external datasets,
-checkpoints, environment-specific dependencies, and in some cases saved UMAP
-coordinates. FedscGen is included as a vendored source snapshot with a local
-patch; its configured upstream commit is recorded but cannot be verified from
-Git metadata in this tree. No final Git commit or Zenodo DOI exists yet.
+reproduction is **not verified**. Fresh runs acquire checksum-pinned external
+datasets and generate checkpoints, embeddings, statistics, UMAP coordinates,
+and figures through the registered workflows. Native, FedscGen, R, and SPU
+environments still require clean runtime validation. FedscGen is included as a
+vendored source snapshot with its upstream commit and local patch recorded. The
+release candidate starts from Git commit
+`66ae21ce3b7af4f4a35cbc355649a9ec697cd358`; no Zenodo DOI exists yet.

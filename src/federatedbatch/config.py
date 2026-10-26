@@ -94,13 +94,20 @@ def validate_config(config: dict[str, Any]) -> None:
         "random_mask_fresh_cross_client",
         "soft_reliability_fresh_cross_client",
         "random_soft_weight_fresh_cross_client",
+        "cross_client_topology",
+        "round_once_ab",
+        "epoch_once_ab",
+        "round_once_joint_cellclip",
+        "round_once_joint_cellclip_noise",
     }:
         raise ValueError(
             "federated.queue.mode must be legacy_fifo, cross_client_soft, "
             "fresh_cross_client, fresh_local_memory, last_seen_fresh_cross_client, "
             "fresh_cross_client_ab, fresh_cross_client_cellclip, fresh_cross_client_cellclip_noise, "
             "reliable_negative_fresh_cross_client, random_mask_fresh_cross_client, "
-            "soft_reliability_fresh_cross_client, or random_soft_weight_fresh_cross_client"
+            "soft_reliability_fresh_cross_client, random_soft_weight_fresh_cross_client, "
+            "cross_client_topology, round_once_ab, epoch_once_ab, "
+            "round_once_joint_cellclip, or round_once_joint_cellclip_noise"
         )
     if float(queue.get("temperature", 0.2)) <= 0:
         raise ValueError("federated.queue.temperature must be positive")

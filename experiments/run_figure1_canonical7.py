@@ -31,9 +31,10 @@ sys.path.insert(0, str(ROOT / "src"))
 SEEDS = (218, 394, 542, 639, 788, 814, 880)
 EVAL_SEEDS = (0, 1, 2, 3, 4)
 REPRESENTATIVE_SEED = 218
-OUT = ROOT / "results" / "figure1_canonical7_final_private"
+PCA_RANDOM_STATE = 42
+OUT = ROOT / "results" / "reproduction" / "figure1"
 REPRO = ROOT / "external_artifacts" / "figure1"
-OLD_SOURCE = REPRO / "results" / "figure1_final_inputs" / "figure1B_source_values.csv"
+PCA_REFERENCE = REPRO / "results" / "figure1_rebuild" / "deterministic_baseline_embeddings.npz"
 
 METRICS = ["ARI", "NMI", "ASW_batch", "ASW_cell", "Graph_connectivity", "iLISI"]
 CANONICAL = list(SEEDS)
@@ -99,7 +100,8 @@ def load_inputs():
 
 
 def preflight() -> dict:
-    if OUT.exists() and any(OUT.iterdir()):
+    existing = set(path.name for path in OUT.iterdir()) if OUT.exists() else set()
+    if existing - {"preflight.json"}:
         raise RuntimeError(f"new output directory is not empty: {OUT}")
     base, adata, data_path, features, groups, partition_payload, schedule, schedule_frame = load_inputs()
     if tuple(SEEDS) != (218, 394, 542, 639, 788, 814, 880):
@@ -112,6 +114,7 @@ def preflight() -> dict:
     queue = cfg["federated"]["queue"]
     checks = {
         "harmony_entrypoint": callable(HARMONY.harmony_embedding),
+        "pca_entrypoint": callable(__import__("federatedbatch.baselines", fromlist=["run_pca"]).run_pca),
         "centralized_entrypoint": callable(__import__("federatedbatch.baselines", fromlist=["run_centralized"]).run_centralized),
         "private_federated_entrypoint": callable(PRIVATE.train_federated),
         "canonical_seeds": list(SEEDS),
@@ -122,7 +125,7 @@ def preflight() -> dict:
         "active_rounds": queue["active_rounds"] == list(range(4, 21)),
         "evaluation_leiden_seeds": list(EVAL_SEEDS),
         "umap_random_state": 42,
-        "new_output_directory": (not OUT.exists()) or (not any(OUT.iterdir())),
+        "new_output_directory": not bool(existing - {"preflight.json"}),
         "partition_seed": int(partition_payload.get("partition_seed", 20260918)) == 20260918,
     }
     if not all(value is True for key, value in checks.items() if key not in {"canonical_seeds", "evaluation_leiden_seeds", "umap_random_state"}):
@@ -136,6 +139,7 @@ def preflight() -> dict:
         "evaluation_leiden_seeds": list(EVAL_SEEDS),
         "umap_random_state": 42,
         "umap_representative_training_seed": REPRESENTATIVE_SEED,
+        "pca_random_state": PCA_RANDOM_STATE,
         "n_clients": 6,
         "partition_seed": 20260918,
         "remote_schedule_rows": int(len(schedule_frame)),
@@ -191,11 +195,54 @@ def run_methods():
     rows = load_previous_rows()
     completed = {(str(r.method), int(r.training_seed)) for r in rows.itertuples()} if not rows.empty else set()
 
-    # Fixed PCA is the original deterministic Figure 1 embedding; no PCA training is rerun.
-    with np.load(PRIVATE.REPRO / "results" / "figure1_rebuild" / "deterministic_baseline_embeddings.npz") as cache:
-        pca_embedding = np.asarray(cache["PCA"], dtype=np.float32)
+    from federatedbatch.baselines import run_centralized, run_pca
 
-    from federatedbatch.baselines import run_centralized
+    # PCA is generated from the same normalized matrix and fixed feature list.
+    # The bundled historical array is an optional benchmark, never a required input.
+    pca_path = OUT / "pca" / "final_embedding.npy"
+    pca_path.parent.mkdir(parents=True, exist_ok=True)
+    pca_config = copy.deepcopy(base)
+    pca_config["seed"] = PCA_RANDOM_STATE
+    if pca_path.exists():
+        pca_embedding = np.load(pca_path).astype(np.float32, copy=False)
+        pca_elapsed = 0.0
+    else:
+        pca_embedding, pca_elapsed = run_pca(adata, features, pca_config)
+        pca_embedding = np.asarray(pca_embedding, dtype=np.float32)
+        np.save(pca_path, pca_embedding)
+    if pca_embedding.shape != (adata.n_obs, base["federated"]["latent_dim"]):
+        raise RuntimeError(f"invalid generated PCA shape: {pca_embedding.shape}")
+    pca_row = evaluate_row(
+        legacy, adata, pca_config, pca_embedding, "PCA", PCA_RANDOM_STATE, pca_path, pca_elapsed
+    )
+    pca_row["training_seed"] = "deterministic"
+    write_csv(pd.DataFrame([pca_row]), OUT / "pca_metrics.csv")
+
+    pca_qc = {
+        "generated_path": str(pca_path),
+        "generated_sha256": sha256(pca_path),
+        "random_state": PCA_RANDOM_STATE,
+        "reference_present": PCA_REFERENCE.is_file(),
+    }
+    if PCA_REFERENCE.is_file():
+        with np.load(PCA_REFERENCE) as cache:
+            reference = np.asarray(cache["PCA"], dtype=np.float32)
+        pca_qc.update(
+            {
+                "reference_path": str(PCA_REFERENCE),
+                "same_shape": reference.shape == pca_embedding.shape,
+                "max_abs_difference": (
+                    float(np.max(np.abs(reference - pca_embedding)))
+                    if reference.shape == pca_embedding.shape
+                    else math.nan
+                ),
+                "allclose_rtol_1e-5_atol_1e-6": bool(
+                    reference.shape == pca_embedding.shape
+                    and np.allclose(reference, pca_embedding, rtol=1e-5, atol=1e-6)
+                ),
+            }
+        )
+    write_json(OUT / "pca_reproduction_qc.json", pca_qc)
 
     for seed in SEEDS:
         # Harmony: fixed PCA input, original max_iter and evaluation seeds.
@@ -276,7 +323,7 @@ def run_methods():
             raise RuntimeError(f"{method} completed seeds {sorted(observed)}, expected {list(SEEDS)}")
     write_csv(rows, OUT / "per_seed_metrics.csv")
     summarize(rows)
-    make_source_and_umap(rows, adata)
+    make_source_and_umap(rows, adata, pca_row, pca_embedding)
     write_final_report(rows)
 
 
@@ -329,20 +376,31 @@ def holm(values: np.ndarray) -> np.ndarray:
     return output
 
 
-def make_source_and_umap(rows: pd.DataFrame, adata) -> None:
-    old = pd.read_csv(OLD_SOURCE)
-    pca_rows = old[old.method == "PCA"].copy()
-    pca_rows["training_seed"] = "deterministic"
+def make_source_and_umap(
+    rows: pd.DataFrame, adata, pca_row: dict, pca_embedding: np.ndarray
+) -> None:
     replacements = []
+    for metric in METRICS:
+        replacements.append(
+            {
+                "method": "PCA",
+                "training_seed": "deterministic",
+                "metric": metric,
+                "value": float(pca_row[metric]),
+                "source": str(OUT / "pca_metrics.csv"),
+                "evaluation_definition": "Figure 1 legacy evaluation computed from repository-generated deterministic PCA",
+                "value_unit": "one deterministic embedding",
+            }
+        )
     for method, output_method in [("Harmony", "Harmony"), ("centralized_CONCORD", "CONCORD"), ("FederatedBatch_final_private", "FederatedBatch")]:
         for record in rows[rows.method == method].itertuples():
             for metric in METRICS:
                 replacements.append({"method": output_method, "training_seed": int(record.training_seed), "metric": metric, "value": float(getattr(record, metric)), "source": str(OUT / "per_seed_metrics.csv"), "evaluation_definition": "Figure 1 legacy metrics; five fixed Leiden states 0-4 averaged for ARI/NMI; raw ASW, legacy graph connectivity and full-pairwise legacy iLISI", "value_unit": "method-level value"})
-    source = pd.concat([pca_rows[["method", "training_seed", "metric", "value", "source", "evaluation_definition", "value_unit"]], pd.DataFrame(replacements)], ignore_index=True)
+    source = pd.DataFrame(replacements)
     write_csv(source, OUT / "figure1B_source_values_canonical7.csv")
 
     embeddings = {
-        "PCA": np.load(PRIVATE.REPRO / "results" / "figure1_rebuild" / "deterministic_baseline_embeddings.npz")["PCA"].astype(np.float32),
+        "PCA": np.asarray(pca_embedding, dtype=np.float32),
         "Harmony": np.load(OUT / "harmony" / f"seed_{REPRESENTATIVE_SEED}" / "final_embedding.npy").astype(np.float32),
         "CONCORD": np.load(OUT / "centralized" / f"seed_{REPRESENTATIVE_SEED}" / "final_embedding.npy").astype(np.float32),
         "FederatedBatch": np.load(OUT / "federatedbatch" / "training" / f"seed_{REPRESENTATIVE_SEED}" / "final_embedding.npy").astype(np.float32),
@@ -397,11 +455,13 @@ def write_final_report(rows: pd.DataFrame) -> None:
 
 
 def main() -> None:
+    global OUT, preflight_payload
     parser = argparse.ArgumentParser()
     parser.add_argument("--preflight", action="store_true")
     parser.add_argument("--resume", action="store_true")
+    parser.add_argument("--output", type=Path, default=OUT)
     args = parser.parse_args()
-    global preflight_payload
+    OUT = args.output.resolve()
     if args.preflight:
         payload = preflight()
         OUT.mkdir(parents=True, exist_ok=True)

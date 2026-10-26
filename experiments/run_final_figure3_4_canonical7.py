@@ -39,8 +39,8 @@ REQUIRED_REMOTE_PER_SOURCE = len(ACTIVE_ROUNDS) * REMOTE_PER_SOURCE
 C = 1206.3391650512762
 SIGMA = 2.0
 NOISE_SEEDS = {seed: 10000 + seed for seed in SEEDS}
-FIG3 = ROOT / "results" / "final_figure3_canonical7"
-FIG4 = ROOT / "results" / "final_figure4_canonical7"
+FIG3 = ROOT / "results" / "reproduction" / "figure3"
+FIG4 = ROOT / "results" / "reproduction" / "figure4"
 DATA_DIR = ROOT / "data"
 BASE_CONFIG = ROOT / "configs" / "figure3_4_base.yaml"
 FEDSCGEN_CONFIG = ROOT / "configs" / "figure3_4_fedscgen.yaml"
@@ -534,7 +534,7 @@ def fedscgen_args(seed: int, output: Path, workflow: str) -> Namespace:
     )
 
 
-def train_fedscgen() -> None:
+def train_fedscgen(selected_figures: tuple[str, ...] = ("3", "4")) -> None:
     # The pinned upstream uses ``import __init__`` inside scgen_utils.py and
     # therefore requires its package directory on sys.path in addition to the
     # repository root. This is import compatibility only; upstream code and
@@ -544,14 +544,14 @@ def train_fedscgen() -> None:
         sys.path.insert(0, str(upstream_package))
     from baselines.fedscgen.run_official import run_lobo, run_multi
 
-    for seed in SEEDS:
+    for seed in SEEDS if "3" in selected_figures else ():
         multi = FIG3 / "training" / "fedscgen" / f"seed_{seed}"
         multi.mkdir(parents=True, exist_ok=True)
         result_path = multi / "fedscgen_multi_dataset_results.csv"
         if not result_path.exists() or len(pd.read_csv(result_path)) != len(DATASETS):
             run_multi(fedscgen_args(seed, multi, "multi_dataset"))
 
-    for seed in SEEDS:
+    for seed in SEEDS if "4" in selected_figures else ():
         lobo = FIG4 / "training" / "fedscgen" / f"seed_{seed}"
         lobo.mkdir(parents=True, exist_ok=True)
         result_path = lobo / "fedscgen_lobo_summary.csv"
@@ -1032,44 +1032,44 @@ zero-shot inference.
     (FIG4 / "FIGURE4_CANONICAL7_REPORT.md").write_text(fig4_text, encoding="utf-8")
 
 
-def finalize() -> None:
+def finalize(selected_figures: tuple[str, ...] = ("3", "4")) -> None:
     legacy = load_legacy()
-    fig3 = collect_figure3_metrics(legacy)
-    fig4 = collect_figure4_metrics(legacy)
+    completed = []
+    if "3" in selected_figures:
+        fig3 = collect_figure3_metrics(legacy)
+        fig3_summary = summarize(fig3, ["dataset", "method"])
+        atomic_csv(fig3_summary, FIG3 / "summary_statistics.csv")
+        fig3_tests = paired_tests(
+            fig3,
+            unit="training_seed",
+            group="dataset",
+            reference="FederatedBatch",
+            comparators=("PCA", "Harmony", "Centralized CONCORD", "FedscGen"),
+        )
+        atomic_csv(fig3_tests, FIG3 / "paired_statistics.csv")
+        atomic_csv(fig3.copy(), FIG3 / "figure3_plot_data.csv")
+        completed.append((FIG3, "Figure 3", fig3))
 
-    fig3_summary = summarize(fig3, ["dataset", "method"])
-    atomic_csv(fig3_summary, FIG3 / "summary_statistics.csv")
-    fig3_tests = paired_tests(
-        fig3,
-        unit="training_seed",
-        group="dataset",
-        reference="FederatedBatch",
-        comparators=("PCA", "Harmony", "Centralized CONCORD", "FedscGen"),
-    )
-    atomic_csv(fig3_tests, FIG3 / "paired_statistics.csv")
-    atomic_csv(fig3.copy(), FIG3 / "figure3_plot_data.csv")
+    if "4" in selected_figures:
+        fig4 = collect_figure4_metrics(legacy)
+        atomic_csv(fig4.copy(), FIG4 / "figure4_plot_data.csv")
+        # Only the final four methods/four held-out metrics enter inference.
+        # The exporter enforces nine batches within each seed and 12 tests.
+        from scripts.summarize.export_figure4_final_tables import (
+            METHOD_MAP, build_summary, build_tests, validate,
+        )
+        final = fig4[fig4.method.isin(METHOD_MAP)].copy()
+        final["method"] = final.method.map(METHOD_MAP)
+        validate(final)
+        atomic_csv(build_summary(final), FIG4 / "summary_statistics.csv")
+        atomic_csv(build_tests(final), FIG4 / "paired_statistics.csv")
+        deployment = fig4[["method", "held_out_participates_in_training", "held_out_participates_in_correction", "additional_communication_rounds", "deployment_mode"]].drop_duplicates()
+        atomic_csv(deployment, FIG4 / "deployment_communication_cost.csv")
+        completed.append((FIG4, "Figure 4", fig4))
 
-    by_batch = summarize(fig4, ["held_out_batch", "method"])
-    atomic_csv(by_batch, FIG4 / "by_heldout_summary_statistics.csv")
-    seed_means = figure4_seed_means(fig4)
-    atomic_csv(seed_means, FIG4 / "seed_mean_metrics.csv")
-    overall = summarize(seed_means, ["method"])
-    atomic_csv(overall, FIG4 / "summary_statistics.csv")
-    tests = paired_tests(
-        seed_means,
-        unit="training_seed",
-        group=None,
-        reference="FederatedBatch",
-        comparators=("PCA", "Centralized CONCORD", "FedscGen zero-shot", "FedscGen two-stage"),
-    )
-    atomic_csv(tests, FIG4 / "paired_statistics.csv")
-    deployment = fig4[["method", "held_out_participates_in_training", "held_out_participates_in_correction", "additional_communication_rounds", "deployment_mode"]].drop_duplicates()
-    atomic_csv(deployment, FIG4 / "deployment_communication_cost.csv")
-    atomic_csv(fig4.copy(), FIG4 / "figure4_plot_data.csv")
-    render_figures(fig3_summary, fig4, overall)
-    write_reports(fig3, fig3_summary, fig3_tests, fig4, overall, tests)
-
-    for output, figure, rows in ((FIG3, "Figure 3", fig3), (FIG4, "Figure 4", fig4)):
+    # Publication renderers are separate registered stages. Do not call the
+    # historical render_figures/write_reports helpers or generate obsolete panels.
+    for output, figure, rows in completed:
         atomic_json(
             {
                 "status": "COMPLETE",
@@ -1085,14 +1085,14 @@ def finalize() -> None:
         )
 
 
-def preflight() -> None:
+def preflight(selected_figures: tuple[str, ...] = ("3", "4")) -> None:
     from federatedbatch.data import read_dataset
 
     base = load_base_config()
     capacity_rows = []
-    for dataset in DATASETS:
-        adata, data_path = read_dataset(dataset, str(DATA_DIR), verify_hash=False)
-        for seed in SEEDS:
+    for dataset in DATASETS if "3" in selected_figures else ("pancreas",):
+        adata, data_path = read_dataset(dataset, str(DATA_DIR), verify_hash=True)
+        for seed in SEEDS if "3" in selected_figures else ():
             batch_groups, index_groups = client_partition(adata, seed)
             for source, (batches, indices) in enumerate(zip(batch_groups, index_groups)):
                 capacity_rows.append(
@@ -1108,7 +1108,7 @@ def preflight() -> None:
                         "passes": len(indices) >= REQUIRED_REMOTE_PER_SOURCE,
                     }
                 )
-        if dataset == "pancreas":
+        if dataset == "pancreas" and "4" in selected_figures:
             for held_out in adata.obs["batch"].astype(str).unique():
                 train = adata[adata.obs["batch"].astype(str) != held_out].copy()
                 for seed in SEEDS:
@@ -1133,6 +1133,8 @@ def preflight() -> None:
         raise RuntimeError(f"remote capacity preflight failed:\n{failures.to_string(index=False)}")
 
     for output, figure in ((FIG3, "Figure 3"), (FIG4, "Figure 4")):
+        if figure[-1] not in selected_figures:
+            continue
         output.mkdir(parents=True, exist_ok=True)
         atomic_csv(capacity[capacity.figure == figure], output / "preflight_remote_capacity.csv")
         atomic_json(
@@ -1161,10 +1163,8 @@ def preflight() -> None:
             },
             output / "preflight.json",
         )
-    print(
-        f"Preflight PASS: Figure 3 minimum client={capacity.loc[capacity.figure == 'Figure 3', 'available_training_cells'].min()}, "
-        f"Figure 4 minimum client={capacity.loc[capacity.figure == 'Figure 4', 'available_training_cells'].min()}"
-    )
+    for figure, group in capacity.groupby("figure"):
+        print(f"Preflight PASS: {figure} minimum client={group.available_training_cells.min()}")
 
 
 def parse_args() -> argparse.Namespace:
@@ -1174,20 +1174,31 @@ def parse_args() -> argparse.Namespace:
         choices=("preflight", "native", "fedscgen", "finalize"),
         required=True,
     )
+    parser.add_argument("--data-dir", type=Path, default=DATA_DIR)
+    parser.add_argument("--figure3-output", type=Path, default=FIG3)
+    parser.add_argument("--figure4-output", type=Path, default=FIG4)
+    parser.add_argument("--figure", choices=("3", "4", "both"), default="both")
     return parser.parse_args()
 
 
 def main() -> None:
     args = parse_args()
+    global DATA_DIR, FIG3, FIG4
+    DATA_DIR = args.data_dir.resolve()
+    FIG3 = args.figure3_output.resolve()
+    FIG4 = args.figure4_output.resolve()
+    selected_figures = ("3", "4") if args.figure == "both" else (args.figure,)
     if args.stage == "preflight":
-        preflight()
+        preflight(selected_figures)
     elif args.stage == "native":
-        train_figure3_native()
-        train_figure4_native()
+        if "3" in selected_figures:
+            train_figure3_native()
+        if "4" in selected_figures:
+            train_figure4_native()
     elif args.stage == "fedscgen":
-        train_fedscgen()
+        train_fedscgen(selected_figures)
     else:
-        finalize()
+        finalize(selected_figures)
 
 
 if __name__ == "__main__":

@@ -338,7 +338,7 @@ def main() -> None:
 
     provenance = {
         "source": str(source),
-        "coordinate_source": str(args.coordinates.resolve()) if args.coordinates else str(output / "coordinates"),
+        "coordinate_source": str(coordinate_dir),
         "canonical_training_seeds": list(SEEDS),
         "representative_training_seed": REPRESENTATIVE_SEED,
         "umap": {"n_neighbors": 15, "min_dist": 0.5, "metric": "euclidean", "random_state": 0},

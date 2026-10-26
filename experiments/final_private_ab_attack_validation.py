@@ -52,6 +52,9 @@ RECONSTRUCTION_BASIS = (
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path, default=OUTPUT)
+    parser.add_argument("--final-root", type=Path, default=FINAL_ROOT)
+    parser.add_argument("--partition-root", type=Path, default=FIGURE2_ROOT)
+    parser.add_argument("--explicit-privacy-root", type=Path, default=FIGURE5_ROOT)
     parser.add_argument("--membership-draws", type=int, default=64)
     parser.add_argument("--reconstruction-candidates-per-source", type=int, default=2)
     parser.add_argument("--optimization-steps", type=int, default=450)
@@ -888,6 +891,10 @@ exposure QC `{provenance['exposure_qc_sha256']}`.
 
 def main() -> None:
     args = parse_args()
+    global FINAL_ROOT, FIGURE2_ROOT, FIGURE5_ROOT
+    FINAL_ROOT = args.final_root
+    FIGURE2_ROOT = args.partition_root
+    FIGURE5_ROOT = args.explicit_privacy_root
     if args.membership_draws < 1:
         raise ValueError("membership draws must be positive")
     if args.reconstruction_candidates_per_source < 1:

@@ -8,6 +8,7 @@ import hashlib
 import json
 import shutil
 import sys
+import tempfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -29,10 +30,39 @@ def verify(path: Path, metadata: dict) -> list[str]:
     actual_size = path.stat().st_size
     if actual_size != metadata["size_bytes"]:
         errors.append(f"size mismatch: expected {metadata['size_bytes']}, got {actual_size}")
+        return errors
     actual_hash = sha256(path)
     if actual_hash != metadata["sha256"]:
         errors.append(f"SHA-256 mismatch: expected {metadata['sha256']}, got {actual_hash}")
     return errors
+
+
+def stage(source: Path, destination: Path, metadata: dict, *, force: bool = False) -> None:
+    """Verify before copying; publish only a verified, atomically staged file."""
+    errors = verify(source, metadata)
+    if errors:
+        raise ValueError(f"invalid source {source}: {'; '.join(errors)}")
+    if source.resolve() == destination.resolve():
+        return
+    if destination.exists():
+        errors = verify(destination, metadata)
+        if not errors:
+            return
+        if not force:
+            raise ValueError(f"destination is invalid; inspect it before using --force: {destination}")
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    with tempfile.NamedTemporaryFile(
+        dir=destination.parent, prefix=destination.name + ".", suffix=".part", delete=False
+    ) as handle:
+        temporary = Path(handle.name)
+    try:
+        shutil.copyfile(source, temporary)
+        errors = verify(temporary, metadata)
+        if errors:
+            raise ValueError(f"invalid staged copy: {'; '.join(errors)}")
+        temporary.replace(destination)
+    finally:
+        temporary.unlink(missing_ok=True)
 
 
 def parse_args() -> argparse.Namespace:
@@ -41,6 +71,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--source-dir", type=Path, help="directory containing downloaded files")
     parser.add_argument("--output-dir", type=Path, default=ROOT / "data")
     parser.add_argument("--verify-only", action="store_true")
+    parser.add_argument("--force", action="store_true", help="replace an invalid destination only after source verification")
     return parser.parse_args()
 
 
@@ -55,20 +86,18 @@ def main() -> int:
     if not args.verify_only and args.source_dir is None:
         raise SystemExit("--source-dir is required unless --verify-only is used")
 
-    args.output_dir.mkdir(parents=True, exist_ok=True)
     failed = False
     for name in selected:
         metadata = datasets[name]
         destination = args.output_dir / metadata["filename"]
         if not args.verify_only:
             source = args.source_dir / metadata["filename"]
-            if not source.exists():
-                print(f"[FAIL] {name}: missing source file {source}")
+            try:
+                stage(source, destination, metadata, force=args.force)
+            except (OSError, ValueError) as exc:
+                print(f"[FAIL] {name}: {exc}")
                 failed = True
                 continue
-            if source.resolve() != destination.resolve():
-                print(f"[COPY] {source} -> {destination}")
-                shutil.copy2(source, destination)
 
         errors = verify(destination, metadata)
         if errors:

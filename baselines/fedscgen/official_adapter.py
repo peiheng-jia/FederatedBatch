@@ -96,6 +96,9 @@ def verify_upstream(config: dict[str, Any]) -> Path:
 
 def import_official(config: dict[str, Any]):
     upstream_path = verify_upstream(config)
+    # The pinned upstream's scgen_utils.py uses a top-level ``import __init__``.
+    # Support both standalone adapter and canonical-driver entry points.
+    sys.path.insert(0, str(upstream_path / "fedscgen"))
     sys.path.insert(0, str(upstream_path))
     from fedscgen.FedScGen import FedScGen
     from fedscgen.utils import aggregate, aggregate_batch_sizes, set_seed

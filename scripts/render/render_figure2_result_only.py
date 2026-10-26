@@ -44,7 +44,6 @@ METRIC_LABELS = {
     "graph_connectivity": "Graph connectivity",
     "iLISI": "iLISI",
 }
-HOLM_FB_VS_NOQUEUE = {"ARI": 0.28995531785508455, "NMI": 0.014835526950737258}
 T_CRITICAL_DF6 = 2.4469118511449692
 
 
@@ -136,6 +135,30 @@ def validate_inputs(per_seed: pd.DataFrame, trajectory: pd.DataFrame, summary: p
         raise ValueError("trajectory summary is incomplete")
 
 
+def load_fb_vs_noqueue_holm(source: Path) -> dict[str, float]:
+    """Read annotation p values from the statistics generated with this input."""
+
+    path = source / "paired_statistics_final.csv"
+    tests = pd.read_csv(path)
+    comparison = "FederatedBatch vs NoQueue"
+    subset = tests.loc[tests["comparison"].astype(str) == comparison].copy()
+    p_column = next(
+        (
+            column
+            for column in ("paired_t_p_holm_18", "p_holm_18")
+            if column in subset.columns
+        ),
+        None,
+    )
+    if p_column is None:
+        raise ValueError(f"{path} has no supported Holm-adjusted p-value column")
+    values = subset.set_index("metric")[p_column]
+    missing = {"ARI", "NMI"} - set(values.index.astype(str))
+    if missing:
+        raise ValueError(f"{path} is missing {comparison} metrics: {sorted(missing)}")
+    return {metric: float(values.loc[metric]) for metric in ("ARI", "NMI")}
+
+
 def paired_limits(values: np.ndarray, metric: str, annotation: bool) -> tuple[float, float]:
     low = float(np.nanmin(values))
     high = float(np.nanmax(values))
@@ -164,6 +187,7 @@ def draw_paired(
     *,
     compact: bool,
     annotate: bool,
+    holm_fb_vs_noqueue: dict[str, float],
     connect_pairs: bool = True,
 ) -> None:
     indexed = per_seed.pivot(index="seed", columns="method", values=metric).loc[list(SEEDS)]
@@ -215,7 +239,7 @@ def draw_paired(
     clean_axis(axis)
     facet_strip(axis, METRIC_LABELS[metric])
     if annotate:
-        p_value = HOLM_FB_VS_NOQUEUE[metric]
+        p_value = holm_fb_vs_noqueue[metric]
         p_text = f"Holm p={p_value:.3f}"
         draw_significance_bracket(axis, 0, 2, p_text)
 
@@ -272,7 +296,13 @@ def save_figure(fig: plt.Figure, stem: Path) -> None:
     fig.savefig(stem.with_suffix(".png"), dpi=600, bbox_inches="tight", pad_inches=0.03)
 
 
-def render_combined(output: Path, per_seed: pd.DataFrame, raw: pd.DataFrame, summary: pd.DataFrame) -> None:
+def render_combined(
+    output: Path,
+    per_seed: pd.DataFrame,
+    raw: pd.DataFrame,
+    summary: pd.DataFrame,
+    holm_fb_vs_noqueue: dict[str, float],
+) -> None:
     fig = plt.figure(figsize=(7.20, 5.45), constrained_layout=False)
     grid = fig.add_gridspec(
         2,
@@ -290,11 +320,27 @@ def render_combined(output: Path, per_seed: pd.DataFrame, raw: pd.DataFrame, sum
     axes_c = [fig.add_subplot(grid[1, index]) for index in range(4)]
 
     for axis, metric in zip(axes_a, ("ARI", "NMI")):
-        draw_paired(axis, per_seed, metric, compact=False, annotate=True, connect_pairs=True)
+        draw_paired(
+            axis,
+            per_seed,
+            metric,
+            compact=False,
+            annotate=True,
+            holm_fb_vs_noqueue=holm_fb_vs_noqueue,
+            connect_pairs=True,
+        )
     for axis, metric in zip(axes_b, ("ARI", "NMI")):
         draw_trajectory(axis, raw, summary, metric)
     for axis, metric in zip(axes_c, ("ASW_batch", "ASW_cell", "graph_connectivity", "iLISI")):
-        draw_paired(axis, per_seed, metric, compact=True, annotate=False, connect_pairs=False)
+        draw_paired(
+            axis,
+            per_seed,
+            metric,
+            compact=True,
+            annotate=False,
+            holm_fb_vs_noqueue=holm_fb_vs_noqueue,
+            connect_pairs=False,
+        )
 
     axes_b[1].legend(
         frameon=False,
@@ -310,10 +356,22 @@ def render_combined(output: Path, per_seed: pd.DataFrame, raw: pd.DataFrame, sum
     plt.close(fig)
 
 
-def render_panel_a(output: Path, per_seed: pd.DataFrame) -> None:
+def render_panel_a(
+    output: Path,
+    per_seed: pd.DataFrame,
+    holm_fb_vs_noqueue: dict[str, float],
+) -> None:
     fig, axes = plt.subplots(1, 2, figsize=(6.4, 2.85))
     for axis, metric in zip(axes, ("ARI", "NMI")):
-        draw_paired(axis, per_seed, metric, compact=False, annotate=True, connect_pairs=True)
+        draw_paired(
+            axis,
+            per_seed,
+            metric,
+            compact=False,
+            annotate=True,
+            holm_fb_vs_noqueue=holm_fb_vs_noqueue,
+            connect_pairs=True,
+        )
     fig.subplots_adjust(left=0.10, right=0.985, top=0.76, bottom=0.19, wspace=0.34)
     add_group_title(fig, list(axes), "Final-round performance", "A")
     save_figure(fig, output / "figure2A_final_performance")
@@ -331,10 +389,22 @@ def render_panel_b(output: Path, raw: pd.DataFrame, summary: pd.DataFrame) -> No
     plt.close(fig)
 
 
-def render_panel_c(output: Path, per_seed: pd.DataFrame) -> None:
+def render_panel_c(
+    output: Path,
+    per_seed: pd.DataFrame,
+    holm_fb_vs_noqueue: dict[str, float],
+) -> None:
     fig, axes = plt.subplots(1, 4, figsize=(7.2, 2.65))
     for axis, metric in zip(axes, ("ASW_batch", "ASW_cell", "graph_connectivity", "iLISI")):
-        draw_paired(axis, per_seed, metric, compact=True, annotate=False, connect_pairs=False)
+        draw_paired(
+            axis,
+            per_seed,
+            metric,
+            compact=True,
+            annotate=False,
+            holm_fb_vs_noqueue=holm_fb_vs_noqueue,
+            connect_pairs=False,
+        )
     fig.subplots_adjust(left=0.075, right=0.985, top=0.73, bottom=0.21, wspace=0.58)
     add_group_title(fig, list(axes), "Other integration metrics", "C")
     save_figure(fig, output / "figure2C_other_metrics")
@@ -356,11 +426,12 @@ def main() -> None:
     trajectory = pd.read_csv(source / "round_trajectory.csv")
     summary = pd.read_csv(source / "round_trajectory_summary.csv")
     validate_inputs(per_seed, trajectory, summary)
+    holm_fb_vs_noqueue = load_fb_vs_noqueue_holm(source)
 
-    render_combined(output, per_seed, trajectory, summary)
-    render_panel_a(output, per_seed)
+    render_combined(output, per_seed, trajectory, summary, holm_fb_vs_noqueue)
+    render_panel_a(output, per_seed, holm_fb_vs_noqueue)
     render_panel_b(output, trajectory, summary)
-    render_panel_c(output, per_seed)
+    render_panel_c(output, per_seed, holm_fb_vs_noqueue)
 
     print(f"Result-only Figure 2 written to {output}")
 

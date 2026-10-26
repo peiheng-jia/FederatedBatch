@@ -29,6 +29,9 @@ data/*.loom
 data/*.zip
 data/*.tar*
 results/runs/
+results/reproduction/
+results/smoke/
+data/*.part
 # Superseded, non-manifested experiment outputs copied from the working tree.
 results/figure2_unified_7seed_original_environment_20260923/
 results/final_figure5
@@ -76,6 +79,14 @@ results/plot_inputs/figure1/legacy_baseline_source_values.csv
 # Duplicate FedscGen snapshot retained locally for audit only. The configured
 # authoritative source is baselines/fedscgen/upstream/.
 third_party/FedscGen/
+
+# Local release-preparation audits and smoke-test framework (not distributed).
+reproducibility/DATA_SOURCE_AUDIT.md
+reproducibility/END_TO_END_REPRODUCIBILITY_AUDIT.md
+reproducibility/workflows.json
+scripts/reproduce.py
+scripts/smoke/
+scripts/summarize/compare_result_tables.py
 
 # Superseded Figure 1 metric recomputation copies with obsolete data/seed paths.
 experiments/recompute_legacy_metrics.py

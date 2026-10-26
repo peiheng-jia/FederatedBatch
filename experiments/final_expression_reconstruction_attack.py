@@ -3,9 +3,11 @@
 
 from __future__ import annotations
 
+import argparse
 import hashlib
 import json
 import math
+import sys
 from pathlib import Path
 
 import numpy as np
@@ -19,8 +21,14 @@ from scipy.stats import rankdata
 from sklearn.linear_model import Ridge
 from sklearn.model_selection import train_test_split
 
-from federatedbatch.data import normalize, read_dataset
-from experiments.final_private_ab_attack_validation import (
+
+REPO_ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(REPO_ROOT))
+sys.path.insert(0, str(REPO_ROOT / "src"))
+
+from federatedbatch.data import normalize, read_dataset  # noqa: E402
+from experiments import final_private_ab_attack_validation as release_attack  # noqa: E402
+from experiments.final_private_ab_attack_validation import (  # noqa: E402
     C,
     FINAL_ROOT,
     FIGURE2_ROOT,
@@ -152,7 +160,6 @@ def mlp_predict(model: MLPDecoder, values: np.ndarray, mean: np.ndarray, scale: 
     return np.concatenate(outputs, axis=0)
 
 
-REPO_ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = REPO_ROOT / "results/final_expression_reconstruction_attack"
 FIGURE5_ROOT = REPO_ROOT / "results/figure5_privacy"
 DATA_DIR = Path(__file__).resolve().parents[1] / "data"
@@ -583,6 +590,28 @@ seed-level confidence intervals are in `reconstruction_summary.csv`.
 
 
 def main() -> None:
+    global OUTPUT, FIGURE5_ROOT, DATA_DIR, FEATURE_PATH, PREVIOUS_RECONSTRUCTION, FRESH_ROOT
+    global FINAL_ROOT, FIGURE2_ROOT
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--output", type=Path, default=OUTPUT)
+    parser.add_argument("--final-root", type=Path, default=FINAL_ROOT)
+    parser.add_argument("--partition-root", type=Path, default=FIGURE2_ROOT)
+    parser.add_argument("--explicit-privacy-root", type=Path, default=FIGURE5_ROOT)
+    parser.add_argument("--explicit-full-root", type=Path, default=FRESH_ROOT)
+    parser.add_argument("--previous-reconstruction", type=Path, default=PREVIOUS_RECONSTRUCTION)
+    parser.add_argument("--data-dir", type=Path, default=DATA_DIR)
+    args = parser.parse_args()
+    OUTPUT = args.output.resolve()
+    FINAL_ROOT = args.final_root.resolve()
+    FIGURE2_ROOT = args.partition_root.resolve()
+    FIGURE5_ROOT = args.explicit_privacy_root.resolve()
+    FRESH_ROOT = args.explicit_full_root.resolve()
+    PREVIOUS_RECONSTRUCTION = args.previous_reconstruction.resolve()
+    DATA_DIR = args.data_dir.resolve()
+    FEATURE_PATH = FINAL_ROOT / "features.txt"
+    release_attack.FINAL_ROOT = FINAL_ROOT
+    release_attack.FIGURE2_ROOT = FIGURE2_ROOT
+    release_attack.FIGURE5_ROOT = FIGURE5_ROOT
     OUTPUT.mkdir(parents=True, exist_ok=True)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     expression, features, expression_meta = load_expression()
@@ -596,10 +625,8 @@ def main() -> None:
         auxiliary_indices, split, excluded_aux_target_overlap = load_auxiliary(
             FIGURE5_ROOT / "02_splits" / f"seed_{seed}_cell_ids.csv", target_ids
         )
-        private_path = (
-            REPO_ROOT / FINAL_ROOT / "training" / f"seed_{seed}" / "Joint-C50-sigma2" / "final_embedding.npy"
-        )
-        fresh_path = REPO_ROOT / FRESH_ROOT / f"seed_{seed}" / "FreshQueue" / "final_embedding.npy"
+        private_path = FINAL_ROOT / "training" / f"seed_{seed}" / "Joint-C50-sigma2" / "final_embedding.npy"
+        fresh_path = FRESH_ROOT / f"seed_{seed}" / "FreshQueue" / "final_embedding.npy"
         private_embedding = normalize_rows(np.load(private_path).astype(np.float32))
         fresh_embedding = normalize_rows(np.load(fresh_path).astype(np.float32))
         if private_embedding.shape != (16382, LATENT_DIM) or fresh_embedding.shape != (16382, LATENT_DIM):

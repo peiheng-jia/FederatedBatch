@@ -26,7 +26,45 @@ This directory is a publication packaging copy. Original experiment directories 
 - Added the obsolete standalone Figure 1 recomputation copies to `.gitignore` and marked them excluded in the artifact manifest; their old sibling-tree data/seed layouts are not current release workflows.
 - Rewrote the README to correct encoding damage and clearly distinguish protocol metadata, statically checked renderer arguments, and unverified experiment/render commands.
 - Repeated the WSL static audit after path/document updates: 122 Python files parsed by AST, 12 JSON and 12 YAML files parsed, core imports passed, and Figure 2–5 renderer help passed. No rendering or model workflow was run.
-- Scanned filenames and documentation for AI conversation/prompt artifacts and generated-content markers; none were found. Third-party and author attributions were retained.
 - Updated `.gitignore` so curated files under `figures/final/` can be archived while generated figures remain ignored; removed the stale repository URL from `CITATION.cff` because no public repository URL has been verified.
 - Python bytecode cache removal was attempted but was blocked by the current execution environment; 8 `__pycache__` directories and 76 `.pyc` files remain in this copy. They are ignored and excluded from the public file manifest. No source, result, or figure files were deleted.
-- No numerical value, model architecture, training hyperparameter, or result table was recomputed during packaging.
+- During initial packaging, no numerical value, model architecture, training hyperparameter, or result table was recomputed. Later bounded integration checks are recorded below; manuscript baselines remain unchanged.
+
+## From-scratch workflow integration (26 October 2026)
+
+- Added guarded stage dispatch, data acquisition/checksum staging, Figure 2
+  three-arm training, fresh Figure 3 UMAP generation, final Figure 4 table
+  export, and separate Figure 5 comparator/attack/accounting/SPU/assembly paths.
+- Corrected native config validation to accept implemented final RoundOnce
+  modes. No training loss, privacy mechanism or canonical parameters changed.
+- Isolated Figure 3 and Figure 4 execution through an explicit figure selector;
+  retired calls from finalization to obsolete plots/reports. Figure 3 keeps
+  72 tests; corrected Figure 4 uses nine-batch averaging and 12 tests.
+- Made the FedscGen adapter supply its upstream import directory itself. The
+  authoritative vendored tree and compatibility patch are unchanged.
+- Added synthetic CPU runtime checks: native shared components and FedscGen
+  training/checkpoint/direct-inference/correction passed. Smoke-only reduced
+  dimensions/rounds exist only in smoke scripts, not canonical YAML files.
+- Rechecked saved-table statistics in temporary directories. Added a keyed
+  result comparator that writes discrepancies separately and protects bundled
+  result/plot/figure directories. No existing manuscript table was overwritten.
+- Updated environment switching, commands, manifests and audit limitations.
+  Raw data, clean installs, real-data per-figure runs, fresh privacy attacks,
+  R and SPU execution remain unverified. No full training, commit or push ran.
+
+## Dataset-source and preparation follow-up (26 October 2026)
+
+- Located all three historical `.h5ad` inputs and verified their size/SHA-256
+  against the release manifest and saved Figure 3 run provenance. Files remain
+  outside the release; no dataset was downloaded, copied, or rewritten.
+- Added exact source evidence, classification, per-figure consumers, missing
+  historical version/file-ID metadata, and empty-data preparation instructions.
+- Staging now verifies sources and temporary copies before publication and
+  protects invalid destinations without an explicit replacement flag.
+  Downloading checks provider name/size/MD5 and verifies payload size/SHA-256
+  before publication; metadata-only mode transfers no dataset payloads.
+- Eight synthetic preparation tests passed; live metadata lookup returned
+  HTTP 403 in WSL. The public acquisition route is not marked verified.
+- Corrected the dataset loader's preparation-script path in its error message.
+  No data processing, model, training parameter, statistical rule, or figure
+  changed. No training, inference, evaluation, commit, or push was run.

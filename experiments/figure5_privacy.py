@@ -9,9 +9,14 @@ import gc
 import hashlib
 import json
 import math
-import subprocess
+import sys
 import time
 from pathlib import Path
+
+# Support direct execution from the repository root.
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+sys.path.insert(0, str(ROOT / "src"))
 
 import matplotlib
 
@@ -46,7 +51,13 @@ from experiments.moderate_skew_freshqueue_confirmation import (
 from federatedbatch.config import REPO_ROOT, load_config, resolve_repo_path
 from federatedbatch.data import normalize, read_dataset, select_features
 from federatedbatch.federated import FederatedRoundSnapshot, train_federated
-from federatedbatch.provenance import build_metadata, git_revision, write_json
+from federatedbatch.provenance import (
+    FIGURE5_VERSIONED_PATHS,
+    build_metadata,
+    git_paths_clean,
+    source_identity,
+    write_json,
+)
 
 
 RECONSTRUCTION_METHODS = ("Mean", "NN", "NN_k5", "Linear", "MLP")
@@ -163,15 +174,6 @@ def relevant_figure2_config(config: dict) -> dict:
     }
 
 
-def git_paths_clean(paths: list[str]) -> bool:
-    result = subprocess.run(
-        ["git", "diff", "--quiet", "HEAD", "--", *paths],
-        cwd=REPO_ROOT,
-        check=False,
-    )
-    return result.returncode == 0
-
-
 def write_protocol_documents(
     privacy: dict,
     privacy_path: Path,
@@ -193,11 +195,11 @@ def write_protocol_documents(
         },
     )
     rows = [
-        ("Repository commit equals Figure 2 run", comparison_checks["git_commit_match"]),
+        ("Verified source revision equals Figure 2 run", comparison_checks["source_revision_match"]),
         ("Preprocessing matches archived Figure 2", comparison_checks["config_match"]),
         ("Federated architecture matches archived Figure 2", comparison_checks["config_match"]),
         ("FreshQueue configuration matches archived Figure 2", comparison_checks["config_match"]),
-        ("Core FreshQueue source files are unchanged at the Figure 2 commit", comparison_checks["core_code_clean"]),
+        ("Core FreshQueue source files match the verified source revision", comparison_checks["core_code_clean"]),
         ("All seven full-data partition hashes match Figure 2", comparison_checks["partition_hashes_match"]),
     ]
     comparison = [
@@ -414,17 +416,20 @@ def preflight(
     archived_path = resolve_repo_path(privacy["figure2_results"])
     archived = load_yaml(archived_path / "config.yaml")
     run_manifest = json.loads((archived_path / "run_manifest.json").read_text(encoding="utf-8"))
-    current_commit = git_revision(REPO_ROOT)
+    identity = source_identity(REPO_ROOT, FIGURE5_VERSIONED_PATHS)
+    archived_revision = run_manifest.get("source_revision") or run_manifest.get("git_commit")
     config_match = relevant_figure2_config(figure2) == relevant_figure2_config(archived)
-    commit_match = current_commit == run_manifest["git_commit"]
-    core_clean = git_paths_clean(
-        ["src/federatedbatch/federated.py", "src/federatedbatch/queue.py", "src/concord"]
+    revision_match = identity["revision"] == archived_revision
+    core_clean = (
+        git_paths_clean(REPO_ROOT, FIGURE5_VERSIONED_PATHS)
+        if identity["kind"] == "git"
+        else True
     )
     source, data_path = read_dataset(figure2["dataset"], figure2["data_dir"])
     split_frames, partitions_match = lock_privacy_splits(source, figure2, privacy, directories)
     checks = {
         "config_match": bool(config_match),
-        "git_commit_match": bool(commit_match),
+        "source_revision_match": bool(revision_match),
         "core_code_clean": bool(core_clean),
         "partition_hashes_match": bool(partitions_match),
     }
@@ -434,6 +439,7 @@ def preflight(
         {
             "status": "PASS" if all(checks.values()) else "FAIL",
             "checks": checks,
+            "source_identity": identity,
             "figure2_run_manifest": run_manifest,
             "execution_environment": build_metadata(REPO_ROOT, data_path),
             "locked_split_hashes": {
@@ -1892,7 +1898,7 @@ def main() -> None:
             "seeds": finished,
             "pilot_seed": pilot_seed,
             "pilot_qc": "PASS",
-            "figure2_commit": git_revision(REPO_ROOT),
+            "source_identity": source_identity(REPO_ROOT, FIGURE5_VERSIONED_PATHS),
             "cumulative_transcript_evaluated": bool(
                 privacy["membership"]["evaluate_cumulative_transcript"]
             ),
