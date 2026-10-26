@@ -1,0 +1,7 @@
+﻿"method","training_seed","metric","value","source","evaluation_definition","value_unit"
+"PCA","deterministic","ARI","0.3085461152438503","external_artifacts/figure1/results/figure1_rebuild/deterministic_baseline_embeddings.npz","mean over fixed Leiden random states 0-4 within each training seed","one deterministic embedding"
+"PCA","deterministic","NMI","0.6799214308265262","external_artifacts/figure1/results/figure1_rebuild/deterministic_baseline_embeddings.npz","mean over fixed Leiden random states 0-4 within each training seed","one deterministic embedding"
+"PCA","deterministic","ASW_batch","-0.0724781658397538","external_artifacts/figure1/results/figure1_rebuild/deterministic_baseline_embeddings.npz","submitted raw silhouette_score(embedding, tech)","one deterministic embedding"
+"PCA","deterministic","ASW_cell","0.172039283019364","external_artifacts/figure1/results/figure1_rebuild/deterministic_baseline_embeddings.npz","submitted raw silhouette_score(embedding, celltype)","one deterministic embedding"
+"PCA","deterministic","Graph_connectivity","0.1498009983861809","external_artifacts/figure1/results/figure1_rebuild/deterministic_baseline_embeddings.npz","submitted directed 15-NN induced-subgraph edge density with self-neighbors","one deterministic embedding"
+"PCA","deterministic","iLISI","1.0285946734683271","external_artifacts/figure1/results/figure1_rebuild/deterministic_baseline_embeddings.npz","submitted full-pairwise Gaussian iLISI with full-square median including diagonal zeros","one deterministic embedding"

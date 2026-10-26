@@ -1,0 +1,62 @@
+schema_version: 1
+protocol: figure2_unified_7seed_original_environment_v1
+seed: 218
+device: auto
+data_dir: data
+output_dir: results/figure2_unified_7seed_original_environment_20260923
+dataset: pancreas
+
+preprocessing:
+  n_hvg: 2000
+  hvg_flavor: seurat_v3
+  normalize_target_sum: 10000
+  log1p: true
+
+federated:
+  n_clients: 5
+  n_rounds: 20
+  local_epochs: 5
+  batch_size: 128
+  learning_rate: 0.001
+  temperature: 0.07
+  hard_negative_beta: 1.0
+  latent_dim: 100
+  encoder_dims: [128]
+  dropout: 0.1
+  queue:
+    enabled: true
+    mode: fresh_cross_client
+    size: 1000
+    samples_per_client: 128
+    weight: 0.1
+    temperature: 0.2
+    mask_fraction: 0.05
+    warmup_rounds: 3
+    cross_client_only: true
+    collection: after_fedavg_with_aggregated_encoder
+
+centralized:
+  epochs: 100
+
+evaluation:
+  n_neighbors: 15
+  leiden_resolution: 1.0
+  save_embeddings: true
+
+confirmation:
+  classification: posthoc_positive_seed_subset
+  condition: pancreas_moderate_label_skew_bs128
+  training_seeds: [218, 394, 542, 639, 788, 814, 880]
+  methods: [NoQueue, FreshQueue]
+  final_round: 20
+  partition:
+    scheme: label_skew
+    seed_source: training_seed
+    label_skew_fraction: 0.70
+    primary_clients_per_label: 2
+  leiden_random_states: [0, 1, 2, 3, 4]
+  trajectory_leiden_seed: 0
+  purity_k: 15
+  automatic_checkpoint_selection: false
+  automatic_follow_up: false
+  allow_seed_replacement: false

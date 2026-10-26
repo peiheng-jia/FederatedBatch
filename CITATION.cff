@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the FederatedBatch manuscript and CONCORD."
+title: "FederatedBatch: Federated Contrastive Learning for Privacy-Preserving Single-Cell Batch Correction"
+type: software
+authors:
+  - family-names: Jia
+    given-names: Peiheng
+  - family-names: Sun
+    given-names: Yu
+  - family-names: Chen
+    given-names: Hebing
+  - family-names: Xiong
+    given-names: Jinbo
+version: 0.3.0
+date-released: 2026-08-31
+license: MIT

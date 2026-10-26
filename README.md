@@ -1,109 +1,134 @@
 # FederatedBatch
 
-Minimal release repository for the FederatedBatch paper: federated contrastive learning for single-cell RNA-seq batch correction.
-
-This release is intentionally small. It contains the core FederatedBatch implementation, a reproducible main experiment entry point, and data download instructions. Raw datasets, trained checkpoints, generated result folders, and figure outputs are excluded from Git.
-
-## Repository Layout
-
-```text
-FederatedBatch/
-├── src/                    # Python package: FederatedBatch, baselines, utilities
-├── experiments/            # Minimal reproducible experiment scripts
-├── scripts/                # Data and helper scripts
-├── data/                   # Data README only; raw data are not tracked
-├── results/                # Result README only; generated outputs are not tracked
-├── requirements.txt
-├── environment_r_viz.yml
-├── setup.py
-└── LICENSE
-```
+FederatedBatch learns a shared single-cell representation using local
+CONCORD training, FedAvg, and cross-client contrastive interaction. This
+repository contains the implementation, baseline adapters, experiment scripts,
+and saved tables/plotting inputs for the FederatedBatch manuscript.
+The output is a latent embedding, not a corrected gene-expression matrix.
 
 ## Installation
 
-```bash
-git clone https://github.com/peiheng-jia/FederatedBatch.git
-cd FederatedBatch
+Run commands from the repository root. The native environment specifies
+Python 3.10.13, PyTorch 2.1.2 and CUDA 11.8; Python dependencies are listed in
+`pyproject.toml`. The small example below runs on CPU.
 
-conda create -n federatedbatch python=3.10
+```bash
+conda env create -f environment/federatedbatch.yml
 conda activate federatedbatch
-pip install -r requirements.txt
-pip install -e .
+python -m pip install -e .
 ```
 
-The optional centralized CONCORD wrapper in `src/baselines/centralized.py` requires the original CONCORD package. Install it separately or place its `src` directory on `PYTHONPATH` if you need that baseline:
+FedscGen has a separate environment (`environment/fedscgen.yml`). Figure 1
+rendering uses R with `ggplot2`, `dplyr` and `cowplot`; Figure 5 secure-computation
+experiments require a separate SecretFlow-SPU/JAX environment. Clean installation
+of all environments has not been verified. See the [environment notes](reproducibility/EXTERNAL_DEPENDENCIES.md).
+
+The paper commands for Figures 3-5 are written for Bash (including WSL on
+Windows), not PowerShell. The minimal CPU example is independent of those shell
+snippets and does not require Git metadata or a GPU.
+
+## Data download
+
+Download the following processed scIB datasets from the
+[official Figshare collection](https://doi.org/10.6084/m9.figshare.12420968).
+Large datasets and checkpoints are not included in Git.
+
+| Dataset | Required filename in `data/` | Cells / batches / cell types |
+|---|---|---|
+| Pancreas | `pancreas.h5ad` | 16382 / 9 / 14 |
+| Immune | `Immune_ALL_human.h5ad` | 33506 / 10 / 16 |
+| Lung | `Lung_atlas_public.h5ad` | 32472 / 16 / 17 |
+
+For browser-downloaded files:
 
 ```bash
-export PYTHONPATH="/path/to/Concord-main/src:$PYTHONPATH"
+python scripts/prepare/prepare_data.py --source-dir /path/to/downloads --dataset all
+python scripts/prepare/prepare_data.py --verify-only --dataset all
 ```
 
-On Windows PowerShell:
+Alternatively, `python scripts/prepare/download_data.py --dataset all` resolves
+the exact provider filenames and verifies downloads. The API returned HTTP 403
+in our environment; use the browser route if blocked. Filenames, byte sizes
+and SHA-256 hashes are recorded in `data/datasets.json`. See [data instructions](data/README.md)
+for verification and source limitations; do not substitute another atlas version.
 
-```powershell
-$env:PYTHONPATH="C:\path\to\Concord-main\src;$env:PYTHONPATH"
-```
+## Preprocessing
 
-## Data
+The paper loaders restore `layers['counts']`, harmonize batch/cell-type labels,
+and use 2,000 HVGs with library-size normalization (`target_sum=10000`) and
+`log1p`. Normalization is applied across the full gene set before subsetting
+model features. Figure 1 uses its saved feature list and fixed partition;
+Figure 4 determines HVGs from training batches and applies the corrected
+full-gene normalization to held-out data before selecting those HVGs.
+The scripts perform these steps; do not normalize the downloaded files again
+before passing them to a paper experiment.
 
-Raw `.h5ad` datasets are not tracked in Git. The benchmark datasets used in the paper were downloaded from the scIB dataset collection released with Luecken et al., *Benchmarking atlas-level data integration in single-cell genomics*:
-
-```text
-https://figshare.com/articles/dataset/Benchmarking_atlas-level_data_integration_in_single-cell_genomics_-_integration_task_datasets/12420968
-```
-
-The paper experiments use the Pancreas, Human Immune, and Human Lung atlas integration datasets from this collection. Place downloaded `.h5ad` files under `data/` and pass the selected file to the main experiment with `--data`.
-
-The repository also includes a small helper for downloading the public Scanpy pancreas dataset as a smoke-test input:
+## Quick start
 
 ```bash
-python scripts/download_data.py --dataset pancreas --output data
+python examples/minimal.py
 ```
 
-The expected main file is:
+This example creates a small count-like AnnData input (64 cells, 24 genes,
+two batches), runs two CPU communication rounds through the existing
+`train_federated` function with private RoundOnce A/B interaction, saves the
+embedding/checkpoint, and checks inference after loading the checkpoint.
+No dataset download or cell-type labels are required. Outputs are under
+`results/runs/minimal/`: `embedding.h5ad` contains
+`obsm['X_federatedbatch']`, `model.pt` holds the model, and `config.yaml`
+records the example settings. Choose a new `--output` directory to run again.
 
-```text
-data/pancreas.h5ad
-```
-
-The input AnnData object must contain batch and cell type annotations. The scripts standardize common column names such as `tech`, `cell_type`, and `celltype`.
-
-## Main Experiment
-
-Run the minimal FederatedBatch experiment:
+To try a small custom `.h5ad`:
 
 ```bash
-python experiments/run_main.py --data data/pancreas.h5ad --output results/main
+python examples/minimal.py --input /path/to/small_counts.h5ad --output results/runs/custom
 ```
 
-Outputs:
+Use unnormalized count-like `X` or `layers['counts']`, unique cell/gene names,
+and `obs['batch']` with at least two batches and eight cells per batch. The
+example uses all supplied genes and reduced model/training settings. It is a
+usage demonstration, not a paper benchmark or a validation of the paper's
+privacy budget. It simulates clients in one process.
 
-```text
-results/main/
-├── metrics.csv
-├── config.json
-└── adata_with_embeddings.h5ad
-```
+The example passed in the existing WSL Ubuntu environment (Python 3.10.13,
+PyTorch 2.1.2), including private A/B interaction and checkpoint reload.
+This is a lightweight usage check, not a clean-environment paper reproduction.
 
-Use `--quick` for a short smoke-test run:
+## Paper results
+
+The direct experiment, summary and plotting commands for Figures 1-5 are in
+[paper reproduction commands](reproducibility/REPRODUCTION_COMMANDS_AND_LOCAL_SOURCES.md).
+They reuse the existing scripts/configurations; no workflow dispatcher is
+required. Full paper runs use seeds `218, 394, 542, 639, 788, 814, 880` and
+can be expensive. New outputs go under `results/reproduction/`.
+
+For example, redraw Figure 3 from the saved metrics and UMAP coordinates:
 
 ```bash
-python experiments/run_main.py --data data/pancreas.h5ad --output results/quick --quick
+python scripts/render/render_figure3_publication.py --input results/final_summaries/figure3 --output figures/redraw/figure3
 ```
 
-## Notes For Reviewers
+Saved-result redraws do not rerun experiments. Figure 3 PCA statistics retain
+seven seed-specific evaluations. Figure 4 uses the preprocessing-fixed results
+and has A/B/C only; Figure 1A and Figure 4A are author-managed schematic panels.
 
-- Raw data, generated figures, checkpoints, and intermediate result folders are intentionally excluded.
-- The main release path is `experiments/run_main.py`.
-- The default main experiment reports PCA, Harmony when available, and FederatedBatch.
-- External CONCORD is required only for the optional centralized CONCORD wrapper; the minimal FederatedBatch implementation lives in `src/federatedbatch`.
-- For exact paper numbers, use the same data preprocessing, seeds, and hardware as the original experiments.
+Known limitations: the CPU example and existing component checks do not
+establish a clean-environment, seven-seed reproduction. Public data retrieval,
+fresh privacy attacks, the R renderer and the SPU environment still need
+independent runtime validation. The ABY3 experiment is a local three-party
+proof of concept, not a multi-institution WAN benchmark. Formal cell-level DP
+applies only to the cross-client A/B release channel, not end-to-end federated
+training or the final model.
 
 ## Citation
 
-```bibtex
-@article{federatedbatch,
-  title   = {FederatedBatch: Federated Contrastive Learning for Single-Cell RNA-seq Batch Correction},
-  author  = {FederatedBatch authors},
-  year    = {2026}
-}
-```
+Use [CITATION.cff](CITATION.cff) for the software authors and manuscript title.
+Please also cite CONCORD and, when using its baseline, FedscGen; source links
+and the FedscGen publication DOI are in [third-party notices](THIRD_PARTY_LICENSES.md).
+No code-archive DOI is currently registered.
+
+## License
+
+FederatedBatch is distributed under the [MIT License](LICENSE). CONCORD's MIT
+notice and FedscGen's Apache-2.0/BSD-3-Clause notices, attribution and local
+patch records are retained; see [THIRD_PARTY_LICENSES.md](THIRD_PARTY_LICENSES.md).

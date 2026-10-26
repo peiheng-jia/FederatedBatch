@@ -1,15 +1,7 @@
-"""
-FederatedBatch: Federated Contrastive Learning for Single-Cell Data Integration
+"""FederatedBatch experiment orchestration."""
 
-A federated learning framework for single-cell RNA-seq data integration that
-preserves data privacy while achieving performance comparable to centralized methods.
-"""
+from .config import load_config, validate_config
+from .federated import FederatedResult, train_federated
 
-__version__ = "1.0.0"
-__author__ = "FederatedBatch Team"
-
-from .model import FederatedBatch
-
-__all__ = [
-    "FederatedBatch",
-]
+__all__ = ["FederatedResult", "load_config", "train_federated", "validate_config"]
+__version__ = "0.3.0"

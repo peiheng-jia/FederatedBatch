@@ -1,0 +1,44 @@
+schema_version: 1
+protocol: corrected_multi_dataset
+seed: 42
+device: auto
+data_dir: data
+output_dir: results/runs
+dataset: pancreas
+
+preprocessing:
+  n_hvg: 2000
+  hvg_flavor: seurat_v3
+  normalize_target_sum: 10000
+  log1p: true
+
+federated:
+  n_clients: 3
+  n_rounds: 20
+  local_epochs: 5
+  batch_size: 128
+  learning_rate: 0.001
+  temperature: 0.07
+  hard_negative_beta: 1.0
+  latent_dim: 100
+  encoder_dims: [128]
+  dropout: 0.1
+  remote_interaction:
+    mode: RoundOnce
+    enabled: true
+    active_rounds: [4, 20]
+    remote_cells_per_source: 102
+    one_time_participation: true
+    clipping: Joint-C50
+    clipping_C: 1206.3391650512762
+    sigma: 2.0
+    tau_q: 0.20
+    alpha: 0.10
+
+centralized:
+  epochs: 100
+
+evaluation:
+  n_neighbors: 15
+  leiden_resolution: 1.0
+  save_embeddings: true

@@ -1,0 +1,46 @@
+schema_version: 1
+record_type: final_protocol_provenance
+protocol: figure2_reviewer_canonical7_final
+dataset: pancreas
+training_seeds: [218, 394, 542, 639, 788, 814, 880]
+methods:
+  - NoQueue
+  - Remote A/B (sigma=0)
+  - FederatedBatch
+
+shared_training:
+  n_clients: 5
+  n_rounds: 20
+  local_epochs: 5
+  batch_size: 128
+  learning_rate: 0.001
+  temperature: 0.07
+  latent_dim: 100
+  encoder_dims: [128]
+  dropout: 0.1
+
+preprocessing:
+  n_hvg: 2000
+  hvg_flavor: seurat_v3
+  normalize_target_sum: 10000
+  log1p: true
+
+remote_interaction:
+  mode: RoundOnce exact A/B
+  warmup_rounds: [1, 2, 3]
+  active_rounds: [4, 20]
+  remote_cells_per_source_active_round: 102
+  one_time_participation: true
+  clipping: Joint-C50
+  clipping_C: 1206.3391650512762
+  tau_q: 0.20
+  alpha: 0.10
+
+method_differences:
+  NoQueue: No cross-client remote A/B interaction.
+  Remote A/B (sigma=0): Matched remote interaction and clipping, without Gaussian noise.
+  FederatedBatch: Matched remote interaction with sigma=2 Gaussian release and noisy-A post-processing.
+
+source_provenance: results/final_summaries/figure2/provenance.json
+training_command: NOT CONFIRMED as self-contained in this release copy
+record_status: metadata_only_not_a_training_config

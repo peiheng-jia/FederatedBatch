@@ -1,0 +1,40 @@
+artifact	path	role	included	verification_or_limitation
+Pancreas	data/pancreas.h5ad	processed final input dataset	NO	Historical source size/SHA-256 verified; not staged; acquisition limits and verified manual staging are documented in data/README.md
+Immune	data/Immune_ALL_human.h5ad	processed final input dataset	NO	Historical source size/SHA-256 verified; not staged; acquisition limits and verified manual staging are documented in data/README.md
+Lung	data/Lung_atlas_public.h5ad	processed final input dataset	NO	Historical source size/SHA-256 verified; not staged; acquisition limits and verified manual staging are documented in data/README.md
+Figure1 summaries	results/final_summaries/figure1/	metrics and paired statistics	YES	Compact CSVs bundled
+Figure2 summaries	results/final_summaries/figure2/	metrics, trajectories, statistics	YES	Compact CSVs bundled
+Figure3 summaries	results/final_summaries/figure3/	per-seed metrics and statistics	YES	Compact CSVs bundled
+Figure4 corrected summaries	results/final_summaries/figure4/	preprocessing-fixed LOBO results	YES	63-scenario summary and paired tests bundled
+Figure5 plot inputs	results/plot_inputs/figure5/	privacy figure redraw inputs	YES	No attack rerun implied
+Training checkpoints	results/reproduction/**/training/	generated model restoration artifacts	NO	Not bundled because large; Figures 1-4 full workflows are designed to generate them rather than require an unpublished checkpoint
+Full embeddings	results/reproduction/**/final_embedding.npy	generated UMAP and attack inputs	NO	Not bundled because large; fresh Figures 1-4 workflows generate them, while quick redraw uses the staged coordinate tables listed below
+Figure 1 staged coordinates	results/plot_inputs/figure1/figure1_umap_coordinates_reference_style.csv	Figure 1 visualization input	YES	Saved coordinate table; no embedding computation implied
+Figure 3 Pancreas coordinates	results/plot_inputs/figure3/pancreas_seed218_umap_coordinates.csv	Figure 3A-F redraw input	YES	Representative seed 218; cell IDs, labels, and method coordinates included
+Figure 3 Immune coordinates	results/plot_inputs/figure3/immune_seed218_umap_coordinates.csv	Figure 3A-F redraw input	YES	Representative seed 218; cell IDs, labels, and method coordinates included
+Figure 3 Lung coordinates	results/plot_inputs/figure3/lung_seed218_umap_coordinates.csv	Figure 3A-F redraw input	YES	Representative seed 218; cell IDs, labels, and method coordinates included
+Figure 1 source package	external_artifacts/figure1/	Harmony helper, metric helper functions, fixed features, PCA cache, and source table	YES	Copied from existing experiment package; source table is restricted to the six deterministic PCA metric rows consumed by the current driver
+Figure 1 fixed partition	partitions/figure1/pancreas_moderate_label_skew_6clients.json	Fixed client partition	YES	Hash and protocol recorded in configs/figure1.yaml
+Figure 1 R palette	external_artifacts/figure1/figures/figure1/r/color_config.R	Shared method and annotation colors for retained R renderers	YES	Copied from existing final Figure 1 source tree; source paths are release-local
+Figure 3/4 base config	configs/figure3_4_base.yaml	Native multi-dataset protocol schema	YES	Copied unchanged from the final experiment configuration used by the driver
+Final figure files	figures/final/	Curated manuscript figure assets	YES	PDF/SVG/PNG outputs; Figure 1A and Figure 4A remain author-managed and are not included
+FedscGen authoritative source	baselines/fedscgen/upstream/	Pinned third-party implementation	YES	Commit and local patch verified by upstream blob IDs and vendored SHA-256 manifest; Apache-2.0 and BSD-3-Clause texts retained
+FedscGen duplicate audit copy	third_party/FedscGen/	Redundant historical snapshot	NO	Python/LICENSE/NOTICE content duplicates the authoritative tree; excluded by .gitignore and release inventory, not deleted
+Python cache files	**/__pycache__/** and **/*.py[cod]	Interpreter-generated cache	NO	8 cache directories and 76 bytecode files remain locally; deletion was blocked; excluded by .gitignore and release manifest
+Virtual environments	**/.venv/**, **/venvs/**, **/site-packages/**	Local environment files	NO	Excluded by .gitignore/release policy; no virtual environment is bundled
+Temporary logs and scratch outputs	**/*.log, **/*.tmp, **/*.bak, **/*pilot*, **/*debug*	Non-final generated material	NO	No such files are included in the curated release inventory
+Legacy Figure 1 baseline table	results/plot_inputs/figure1/legacy_baseline_source_values.csv	Obsolete seed-block plotting input	NO	Not referenced by release scripts; retained locally because deletion was blocked; excluded by .gitignore
+Legacy figure previews	figures/final/legacy_preview_figure*.png	Superseded preview images	NO	Final format-specific outputs are retained under figures/final/figure1..figure5; excluded by .gitignore
+Historical recomputation helpers	experiments/recompute_legacy_metrics.py; scripts/summarize/recompute_legacy_metrics.py	Superseded Figure 1 analysis copies	NO	Contain old seed/data layouts and source-history paths; not imported by final renderer/training entry points and not listed as reproduction commands
+Superseded Figure 2 run artifacts	results/figure2_unified_7seed_original_environment_20260923/	Historical environment feature list and seed partitions	NO	Not listed as final reproduction inputs; final Figure 2 summaries and redraw inputs are bundled under results/final_summaries/figure2/ and results/plot_inputs/figure2/
+Unmanifested historical outputs	results/final_figure5; results/final_expression_reconstruction_attack; results/final_private_AB_attack_validation; results/round_once_jointDP_seed218; results/secure_AB_spu_poc	Superseded plotting source and duplicated/intermediate result tables	NO	Retained locally for audit; excluded by .gitignore. Current Figure 5 renderer and inputs are scripts/render/ and results/plot_inputs/figure5/
+Workflow registry	reproducibility/workflows.json	internal release-preparation workflow prototype	NO	Not required by the documented direct CLI commands; retained locally but excluded from the public release
+Release contract smoke test	scripts/smoke/validate_release_contracts.py	internal release-preparation check	NO	Retained locally but excluded from the public release; does not establish numerical reproduction
+Figure 5 explicit full-data comparator	experiments/run_figure5_explicit_full_data.py	generates historical direct-sharing embeddings used only by matched reconstruction	YES	Executable source included; generated checkpoints/embeddings excluded; not part of final Figure 2 protocol
+Figure 5 accounting and assembly	scripts/summarize/generate_figure5_privacy_accounting.py; scripts/summarize/assemble_figure5_plot_inputs.py	analytic DP table and value-preserving renderer-input assembly	YES	Accounting matched bundled epsilon values in a temporary test; no attack result recomputed
+Native runtime smoke	scripts/smoke/run_native_training_smoke.py	internal synthetic two-client CPU component test	NO	Retained locally but excluded from the public release; canonical configs unchanged
+FedscGen runtime smoke	scripts/smoke/run_fedscgen_training_smoke.py	internal synthetic training/checkpoint/inference/correction test	NO	Retained locally but excluded from the public release; not canonical LOBO
+Workflow wiring test	scripts/smoke/validate_workflow_wiring.py	internal figure isolation and final-statistics round-trip	NO	Retained locally but excluded from the public release
+Runtime environment probe	scripts/smoke/check_runtime_environment.py	internal module/version/source check	NO	Retained locally but excluded from the public release
+Generated smoke outputs	results/smoke/	synthetic models/reports and temporary verification products	NO	Ignored; never eligible for manuscript statistics
+Result comparison	scripts/summarize/compare_result_tables.py	internal keyed CSV comparison helper	NO	Retained locally but excluded from the public release; not required by the documented direct CLI commands

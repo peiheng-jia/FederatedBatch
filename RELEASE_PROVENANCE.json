@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "release_version": "0.3.0",
+  "source_commit": null,
+  "purpose": "Verified source identity fallback for formal archives that do not include .git metadata",
+  "files_sha256": {
+    "configs/figure2_legacy_freshqueue.yaml": "d4eef89abecb53fa689ce46a393fc7510b2ba8e57ac11f42d6c6fb315791f74c",
+    "configs/figure5_privacy.yaml": "15a5e28a5bb06326df6040e44360401b999b63789fbe3b69dc66fff738292af8",
+    "experiments/figure5_privacy.py": "969de1785ea339cf145326eff8ffe9d9e7534bbf371849fdeddf7ed4754e7af3",
+    "experiments/moderate_skew_freshqueue_confirmation.py": "419bb43a19891f27dc3328504e054fa690df5423029c6d20f823b51ff39f59b4",
+    "scripts/prepare/prepare_figure5_explicit_baseline.py": "60f727e2d61dee8c7bc03a2ff64af4bdc29903f5a557309a29fbb1c62deac70f",
+    "src/federatedbatch/federated.py": "9643458746a3603b9e78518bf7a6b387d0f280728a1701b4d1a2db9657dca7e7",
+    "src/federatedbatch/provenance.py": "675e773b0921f5bd992910d57e060a1b0babbab43280a16779de2fccd8b705f0",
+    "src/federatedbatch/queue.py": "91b950316c9e1f9b9a96bd31ea8bdd18e710107ee5ffcd1d3a113eda707a209f"
+  },
+  "trees_sha256": {
+    "src/concord": "a8ff40e1b380550a760bf7b93225dfd47a054c40d76873d441e5d27ef1f32c07"
+  }
+}
