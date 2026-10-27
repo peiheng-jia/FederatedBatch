@@ -1,0 +1,90 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+build/
+dist/
+.venv/
+.venvs/
+venv/
+venvs/
+site-packages/
+**/site-packages/
+**/conda-meta/
+.env
+.cache/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+.Rhistory
+.RData
+
+# Raw data and generated artifacts
+data/*.h5ad
+data/*.h5
+data/*.loom
+data/*.zip
+data/*.tar*
+results/runs/
+results/reproduction/
+results/smoke/
+data/*.part
+# Superseded, non-manifested experiment outputs copied from the working tree.
+results/figure2_unified_7seed_original_environment_20260923/
+results/final_figure5
+results/final_expression_reconstruction_attack
+results/final_private_AB_attack_validation
+results/round_once_jointDP_seed218
+results/secure_AB_spu_poc
+# Generated figures; retain the curated release outputs.
+figures/*
+!figures/final/
+!figures/final/**
+checkpoints/
+*.pt
+*.pth
+*.log
+*.tmp
+*.bak
+
+# Dataset and model artifacts are distributed separately.
+*.h5ad
+*.h5
+*.loom
+*.pt
+*.pth
+*.ckpt
+*.npy
+*.npz
+!external_artifacts/figure1/results/figure1_rebuild/deterministic_baseline_embeddings.npz
+
+# Manuscript files remain outside the code repository until release is permitted.
+*.docx
+*.pdf
+!figures/final/**/*.pdf
+!figures/final/**/*.svg
+!figures/final/**/*.png
+figures/final/legacy_preview_figure*.png
+
+# Keep only curated reference tables in Git.
+!results/reference/**/*.csv
+!results/reference/**/*.json
+
+# Obsolete Figure 1 seed-block input retained locally for audit only.
+results/plot_inputs/figure1/legacy_baseline_source_values.csv
+
+# Duplicate FedscGen snapshot retained locally for audit only. The configured
+# authoritative source is baselines/fedscgen/upstream/.
+third_party/FedscGen/
+
+# Local release-preparation audits and smoke-test framework (not distributed).
+scripts/reproduce.py
+scripts/smoke/
+scripts/summarize/compare_result_tables.py
+
+# Superseded Figure 1 metric recomputation copies with obsolete data/seed paths.
+experiments/recompute_legacy_metrics.py
+scripts/summarize/recompute_legacy_metrics.py

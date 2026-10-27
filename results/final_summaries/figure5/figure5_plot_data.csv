@@ -1,0 +1,1304 @@
+panel,analysis,method,unit_type,unit_id,metric,value,source_file
+A,membership_auroc,Original explicit embeddings,seed,218,auroc,1.0,membership_attack.csv
+A,membership_auroc,Remote A/B ($\sigma$ = 0),seed,218,auroc,1.0,membership_attack.csv
+A,membership_auroc,Final FederatedBatch,seed,218,auroc,0.627792771654796,membership_attack.csv
+A,membership_auroc,Original explicit embeddings,seed,394,auroc,0.9997294840720222,membership_attack.csv
+A,membership_auroc,Remote A/B ($\sigma$ = 0),seed,394,auroc,1.0,membership_attack.csv
+A,membership_auroc,Final FederatedBatch,seed,394,auroc,0.6274543138325147,membership_attack.csv
+A,membership_auroc,Original explicit embeddings,seed,542,auroc,1.0,membership_attack.csv
+A,membership_auroc,Remote A/B ($\sigma$ = 0),seed,542,auroc,1.0,membership_attack.csv
+A,membership_auroc,Final FederatedBatch,seed,542,auroc,0.6246359158809777,membership_attack.csv
+A,membership_auroc,Original explicit embeddings,seed,639,auroc,0.9999888144427914,membership_attack.csv
+A,membership_auroc,Remote A/B ($\sigma$ = 0),seed,639,auroc,1.0,membership_attack.csv
+A,membership_auroc,Final FederatedBatch,seed,639,auroc,0.6249960223398521,membership_attack.csv
+A,membership_auroc,Original explicit embeddings,seed,788,auroc,1.0,membership_attack.csv
+A,membership_auroc,Remote A/B ($\sigma$ = 0),seed,788,auroc,1.0,membership_attack.csv
+A,membership_auroc,Final FederatedBatch,seed,788,auroc,0.6250983558268968,membership_attack.csv
+A,membership_auroc,Original explicit embeddings,seed,814,auroc,0.9999891078216732,membership_attack.csv
+A,membership_auroc,Remote A/B ($\sigma$ = 0),seed,814,auroc,1.0,membership_attack.csv
+A,membership_auroc,Final FederatedBatch,seed,814,auroc,0.6256338542854097,membership_attack.csv
+A,membership_auroc,Original explicit embeddings,seed,880,auroc,0.9999045082706448,membership_attack.csv
+A,membership_auroc,Remote A/B ($\sigma$ = 0),seed,880,auroc,1.0,membership_attack.csv
+A,membership_auroc,Final FederatedBatch,seed,880,auroc,0.6273257460721894,membership_attack.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,HP1504101T2D_D23,pearson,0.7143563628196716,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,HP1504101T2D_D23,rmse,0.2136927843093872,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1297,pearson,0.6430120468139648,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1297,rmse,0.1746252626180648,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D31-3_14,pearson,0.914795458316803,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D31-3_14,rmse,0.2369274497032165,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1587,pearson,0.613776445388794,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1587,rmse,0.270479142665863,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D3en3_68,pearson,0.8342668414115906,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D3en3_68,rmse,0.335790753364563,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1500,pearson,0.5259509086608887,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1500,rmse,0.1924151182174682,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D101_52,pearson,0.8580042719841003,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D101_52,rmse,0.3019848763942718,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1415,pearson,0.5654656887054443,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1415,rmse,0.1726581752300262,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D29-2_78,pearson,0.7559685111045837,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D29-2_78,rmse,0.2610422074794769,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1526,pearson,0.6625881791114807,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1526,rmse,0.2741275429725647,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D31-3_61,pearson,0.6176729202270508,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D31-3_61,rmse,0.3145484924316406,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1433,pearson,0.6044883131980896,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1433,rmse,0.1703573912382125,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D28-2_63,pearson,0.7499069571495056,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D28-2_63,rmse,0.2734574973583221,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1244,pearson,0.553318202495575,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1244,rmse,0.22835473716259,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D29-5_51,pearson,0.735643744468689,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D29-5_51,rmse,0.262237399816513,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1399,pearson,0.3659358620643616,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1399,rmse,0.2944081425666809,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D17TGFB_40,pearson,0.6017470955848694,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D17TGFB_40,rmse,0.3044403195381164,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1308,pearson,0.5255599617958069,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1308,rmse,0.173049658536911,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,HP1502401_N11,pearson,0.6946281790733337,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,HP1502401_N11,rmse,0.2380519956350326,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1538,pearson,0.7305975556373596,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1538,rmse,0.2381755262613296,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,HP1504101T2D_A18,pearson,0.76973956823349,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,HP1504101T2D_A18,rmse,0.2166051566600799,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_748,pearson,0.6261028051376343,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_748,rmse,0.2560581564903259,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D30-6_90,pearson,0.6841474771499634,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D30-6_90,rmse,0.2885710895061493,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1561,pearson,0.6381638050079346,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1561,rmse,0.2514708340167999,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,HP1506401_I14,pearson,0.7397559285163879,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,HP1506401_I14,rmse,0.2335813045501709,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_886,pearson,0.6368246078491211,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_886,rmse,0.2341844588518142,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D101_5,pearson,0.652914822101593,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D101_5,rmse,0.3023234605789184,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1498,pearson,0.5617144107818604,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1498,rmse,0.1765598803758621,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D29-1_67,pearson,0.7046232223510742,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D29-1_67,rmse,0.2677068710327148,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1172,pearson,0.3439140617847442,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1172,rmse,0.2899332642555237,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,HP1504101T2D_D23,pearson,0.702378511428833,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,HP1504101T2D_D23,rmse,0.2202123552560806,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1297,pearson,0.6128541827201843,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1297,rmse,0.177913948893547,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D31-3_14,pearson,0.917861819267273,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D31-3_14,rmse,0.2288526743650436,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1587,pearson,0.5889286994934082,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1587,rmse,0.2768199443817138,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D3en3_68,pearson,0.8288085460662842,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D3en3_68,rmse,0.3381766378879547,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1500,pearson,0.566648542881012,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1500,rmse,0.1839334666728973,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D101_52,pearson,0.8553501963615417,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D101_52,rmse,0.3053534924983978,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1415,pearson,0.5306137800216675,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1415,rmse,0.1903769522905349,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D29-2_78,pearson,0.7424839735031128,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D29-2_78,rmse,0.2678828835487366,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1526,pearson,0.6474301218986511,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1526,rmse,0.2786082327365875,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D31-3_61,pearson,0.6341477632522583,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D31-3_61,rmse,0.3080387413501739,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1433,pearson,0.5828201770782471,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1433,rmse,0.1780580580234527,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D28-2_63,pearson,0.7661466598510742,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D28-2_63,rmse,0.2671572268009186,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1244,pearson,0.5488372445106506,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1244,rmse,0.2268927097320556,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D29-5_51,pearson,0.7181370854377747,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D29-5_51,rmse,0.2683764100074768,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1399,pearson,0.381420761346817,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1399,rmse,0.2787562906742096,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D17TGFB_40,pearson,0.5991959571838379,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D17TGFB_40,rmse,0.3054572641849518,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1308,pearson,0.5297952890396118,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1308,rmse,0.1662067919969558,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,HP1502401_N11,pearson,0.7078078985214233,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,HP1502401_N11,rmse,0.2318092882633209,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1538,pearson,0.7412164807319641,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1538,rmse,0.2330849170684814,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,HP1504101T2D_A18,pearson,0.7622972726821899,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,HP1504101T2D_A18,rmse,0.2194434106349945,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_748,pearson,0.6110243797302246,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_748,rmse,0.2638669610023498,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D30-6_90,pearson,0.6977949738502502,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D30-6_90,rmse,0.2827522158622741,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1561,pearson,0.6273855566978455,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1561,rmse,0.2523267567157745,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,HP1506401_I14,pearson,0.7354642748832703,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,HP1506401_I14,rmse,0.2362742722034454,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_886,pearson,0.6194131970405579,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_886,rmse,0.2399306893348693,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D101_5,pearson,0.6848994493484497,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D101_5,rmse,0.2881532311439514,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1498,pearson,0.5281678438186646,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1498,rmse,0.1897794008255005,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D29-1_67,pearson,0.7396925091743469,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D29-1_67,rmse,0.25200355052948,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1172,pearson,0.35349240899086,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1172,rmse,0.2759937047958374,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,HP1504101T2D_D23,pearson,0.3513903319835663,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,HP1504101T2D_D23,rmse,0.5141309499740601,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1297,pearson,0.4045691192150116,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1297,rmse,0.4997090101242065,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D31-3_14,pearson,0.4753907024860382,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D31-3_14,rmse,0.5171537399291992,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1587,pearson,0.249639555811882,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1587,rmse,0.4169371426105499,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D3en3_68,pearson,0.3665303289890289,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D3en3_68,rmse,0.5458509922027588,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1500,pearson,0.442143827676773,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1500,rmse,0.3121152222156524,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D101_52,pearson,0.5760851502418518,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D101_52,rmse,0.4792303740978241,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1415,pearson,0.327073335647583,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1415,rmse,0.397772878408432,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D29-2_78,pearson,0.4753921031951904,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D29-2_78,rmse,0.3870336711406708,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1526,pearson,0.2631807029247284,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1526,rmse,0.4435627460479736,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D31-3_61,pearson,0.4796918034553528,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D31-3_61,rmse,0.357718288898468,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1433,pearson,0.462406188249588,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1433,rmse,0.2601824402809143,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D28-2_63,pearson,0.4352195560932159,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D28-2_63,rmse,0.3886365294456482,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1244,pearson,0.3205426037311554,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1244,rmse,0.3277220726013183,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D29-5_51,pearson,0.3792629539966583,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D29-5_51,rmse,0.3991513550281524,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1399,pearson,0.2344544827938079,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1399,rmse,0.3590516746044159,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D17TGFB_40,pearson,0.3706395030021667,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D17TGFB_40,rmse,0.3880659937858581,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1308,pearson,0.4366812109947204,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1308,rmse,0.2845778167247772,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,HP1502401_N11,pearson,0.4166782200336456,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,HP1502401_N11,rmse,0.3304802477359772,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1538,pearson,0.3662051856517792,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1538,rmse,0.3612353205680847,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,HP1504101T2D_A18,pearson,0.4329002201557159,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,HP1504101T2D_A18,rmse,0.341206282377243,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_748,pearson,0.3997431099414825,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_748,rmse,0.3440620005130768,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D30-6_90,pearson,0.5132293105125427,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D30-6_90,rmse,0.3511015176773071,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1561,pearson,0.2984603345394134,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1561,rmse,0.3705087900161743,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,HP1506401_I14,pearson,0.4204174876213074,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,HP1506401_I14,rmse,0.323620080947876,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_886,pearson,0.4888569414615631,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_886,rmse,0.2766651213169098,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D101_5,pearson,0.3035302758216858,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D101_5,rmse,0.422920674085617,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1498,pearson,0.3441064357757568,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1498,rmse,0.3261280059814453,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D29-1_67,pearson,0.5980449318885803,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D29-1_67,rmse,0.3419781327247619,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1172,pearson,0.1897233128547668,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1172,rmse,0.4234781563282013,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D3en2_16,pearson,0.8680126070976257,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D3en2_16,rmse,0.2999243438243866,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1498,pearson,0.5339456796646118,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1498,rmse,0.1775613278150558,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D28-1_85,pearson,0.8441354632377625,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D28-1_85,rmse,0.2467318773269653,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_943,pearson,0.679930567741394,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_943,rmse,0.2572188377380371,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D31-3_77,pearson,0.7581238150596619,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D31-3_77,rmse,0.2457180470228195,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1512,pearson,0.5186113119125366,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1512,rmse,0.1850568056106567,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D29-7_60,pearson,0.7468958497047424,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D29-7_60,rmse,0.2537807524204254,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_968,pearson,0.4462714791297912,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_968,rmse,0.2052240818738937,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,HP1508501T2D_J17,pearson,0.8003174662590027,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,HP1508501T2D_J17,rmse,0.187476709485054,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1464,pearson,0.4811044633388519,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1464,rmse,0.2217169553041458,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D10631_66,pearson,0.8119151592254639,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D10631_66,rmse,0.349852055311203,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1591,pearson,0.5705561637878418,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1591,rmse,0.2689130306243896,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D31-7_79,pearson,0.741119384765625,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D31-7_79,rmse,0.2711292207241058,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_650,pearson,0.7631455659866333,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_650,rmse,0.2000997215509414,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D172444_23,pearson,0.5857388377189636,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D172444_23,rmse,0.3228961229324341,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1564,pearson,0.564399003982544,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1564,rmse,0.2624298930168152,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D30-3_21,pearson,0.6940011382102966,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D30-3_21,rmse,0.2725750505924225,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1326,pearson,0.6522062420845032,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1326,rmse,0.180987000465393,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D30-7_20,pearson,0.9219757914543152,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D30-7_20,rmse,0.2501137852668762,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1475,pearson,0.4610687494277954,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1475,rmse,0.1827324628829956,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D71_39,pearson,0.8387239575386047,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D71_39,rmse,0.3062876462936401,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1495,pearson,0.6026696562767029,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1495,rmse,0.169652447104454,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D31-3_54,pearson,0.6719157695770264,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D31-3_54,rmse,0.2870007753372192,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1561,pearson,0.6661201119422913,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1561,rmse,0.2352427542209625,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D102_4,pearson,0.6239374279975891,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D102_4,rmse,0.2831749618053436,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1262,pearson,0.635814905166626,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1262,rmse,0.1731500029563903,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D29-1_73,pearson,0.7342130541801453,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D29-1_73,rmse,0.2475624233484268,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1441,pearson,0.3555514216423034,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1441,rmse,0.2086670398712158,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D17TGFB_9,pearson,0.9190199971199036,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D17TGFB_9,rmse,0.234536737203598,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1264,pearson,0.5839294791221619,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1264,rmse,0.1555777788162231,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D3en2_16,pearson,0.8653765320777893,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D3en2_16,rmse,0.3020218014717102,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1498,pearson,0.5271484851837158,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1498,rmse,0.1859895586967468,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D28-1_85,pearson,0.8398491144180298,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D28-1_85,rmse,0.2496331632137298,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_943,pearson,0.608287513256073,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_943,rmse,0.278622567653656,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D31-3_77,pearson,0.741495668888092,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D31-3_77,rmse,0.2529805600643158,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1512,pearson,0.5210157036781311,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1512,rmse,0.1801793128252029,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D29-7_60,pearson,0.742621660232544,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D29-7_60,rmse,0.2537116408348083,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_968,pearson,0.4623542129993438,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_968,rmse,0.2082209289073944,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,HP1508501T2D_J17,pearson,0.8302893042564392,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,HP1508501T2D_J17,rmse,0.1705482453107834,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1464,pearson,0.5725846886634827,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1464,rmse,0.1873898357152938,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D10631_66,pearson,0.8148619532585144,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D10631_66,rmse,0.3422572910785675,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1591,pearson,0.5877485275268555,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1591,rmse,0.2624094486236572,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D31-7_79,pearson,0.7458422780036926,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D31-7_79,rmse,0.2700632512569427,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_650,pearson,0.7737786173820496,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_650,rmse,0.1960934549570083,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D172444_23,pearson,0.5777226686477661,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D172444_23,rmse,0.3249288499355316,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1564,pearson,0.6248558759689331,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1564,rmse,0.2516739666461944,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D30-3_21,pearson,0.6982422471046448,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D30-3_21,rmse,0.2710441052913666,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1326,pearson,0.6387329697608948,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1326,rmse,0.1835797578096389,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D30-7_20,pearson,0.924306094646454,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D30-7_20,rmse,0.2573204636573791,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1475,pearson,0.4769479036331177,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1475,rmse,0.190616637468338,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D71_39,pearson,0.8414674997329712,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D71_39,rmse,0.3034503757953644,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1495,pearson,0.616346538066864,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1495,rmse,0.1614861935377121,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D31-3_54,pearson,0.6990829110145569,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D31-3_54,rmse,0.2774110436439514,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1561,pearson,0.6278532147407532,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1561,rmse,0.2488647848367691,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D102_4,pearson,0.6390312910079956,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D102_4,rmse,0.2784606218338012,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1262,pearson,0.6974539160728455,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1262,rmse,0.1541610062122345,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D29-1_73,pearson,0.7347151637077332,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D29-1_73,rmse,0.2477625012397766,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1441,pearson,0.3624160587787628,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1441,rmse,0.1813551783561706,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D17TGFB_9,pearson,0.9157724976539612,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D17TGFB_9,rmse,0.2429676800966262,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1264,pearson,0.5504758358001709,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1264,rmse,0.1643975973129272,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D3en2_16,pearson,0.0484320260584354,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D3en2_16,rmse,0.6485959887504578,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1498,pearson,0.353789210319519,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1498,rmse,0.2763571739196777,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D28-1_85,pearson,0.6953165531158447,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D28-1_85,rmse,0.3351795971393585,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_943,pearson,0.3536204099655151,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_943,rmse,0.4062188863754272,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D31-3_77,pearson,0.5045647025108337,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D31-3_77,rmse,0.3500169515609741,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1512,pearson,0.5164850354194641,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1512,rmse,0.2887647151947021,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D29-7_60,pearson,0.3428703248500824,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D29-7_60,rmse,0.4069447219371795,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_968,pearson,0.4218690395355224,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_968,rmse,0.3173992335796356,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,HP1508501T2D_J17,pearson,0.4297809898853302,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,HP1508501T2D_J17,rmse,0.4131864309310913,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1464,pearson,0.2932755649089813,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1464,rmse,0.4468402564525604,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D10631_66,pearson,0.2794753015041351,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D10631_66,rmse,0.5628580451011658,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1591,pearson,0.3544889986515045,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1591,rmse,0.3561704158782959,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D31-7_79,pearson,0.5478044748306274,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D31-7_79,rmse,0.3595923781394958,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_650,pearson,0.4279737472534179,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_650,rmse,0.3563205599784851,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D172444_23,pearson,0.2654823064804077,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D172444_23,rmse,0.4515167772769928,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1564,pearson,0.1270259320735931,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1564,rmse,0.4340248107910156,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D30-3_21,pearson,0.4207106530666351,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D30-3_21,rmse,0.3800455629825592,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1326,pearson,0.4965146780014038,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1326,rmse,0.2930323481559753,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D30-7_20,pearson,0.4862131476402282,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D30-7_20,rmse,0.5577738881111145,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1475,pearson,0.3532407879829407,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1475,rmse,0.2952832281589508,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D71_39,pearson,0.5846689343452454,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D71_39,rmse,0.4618476629257202,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1495,pearson,0.2742632627487182,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1495,rmse,0.3660194873809814,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D31-3_54,pearson,0.3189785778522491,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D31-3_54,rmse,0.3794428706169128,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1561,pearson,0.1676143407821655,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1561,rmse,0.3507298529148102,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D102_4,pearson,0.4368167817592621,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D102_4,rmse,0.3757194876670837,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1262,pearson,0.3574239909648895,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1262,rmse,0.3355765044689178,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D29-1_73,pearson,0.3989542424678802,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D29-1_73,rmse,0.3589901626110077,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1441,pearson,0.2690756916999817,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1441,rmse,0.2869892716407776,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D17TGFB_9,pearson,0.7863882780075073,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D17TGFB_9,rmse,0.3677089214324951,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1264,pearson,0.2714645862579345,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1264,rmse,0.4560924172401428,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,HP1502401_G12,pearson,0.7693707346916199,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,HP1502401_G12,rmse,0.2071347385644912,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1565,pearson,0.6880373954772949,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1565,rmse,0.2140065133571624,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D31-1_80,pearson,0.7445108294487,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D31-1_80,rmse,0.2464680522680282,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1572,pearson,0.5434966683387756,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1572,rmse,0.3325806260108948,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,HP1504101T2D_D18,pearson,0.7287799715995789,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,HP1504101T2D_D18,rmse,0.2251107543706894,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1309,pearson,0.4917578995227813,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1309,rmse,0.1927278637886047,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,HP1502401_B15,pearson,0.7207144498825073,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,HP1502401_B15,rmse,0.2467933893203735,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1537,pearson,0.7260816097259521,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1537,rmse,0.2485967725515365,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D29-6_88,pearson,0.6954283118247986,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D29-6_88,rmse,0.276790976524353,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1458,pearson,0.5079901814460754,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1458,rmse,0.1745970249176025,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D17All1_18,pearson,0.6822433471679688,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D17All1_18,rmse,0.2730757892131805,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1582,pearson,0.7051792144775391,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1582,rmse,0.239431083202362,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,HP1504901_H19,pearson,0.6028090119361877,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,HP1504901_H19,rmse,0.2744337916374206,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1320,pearson,0.630768895149231,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1320,rmse,0.1787826269865036,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D28-2_37,pearson,0.7896942496299744,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D28-2_37,rmse,0.2383798360824585,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_535,pearson,0.5267208218574524,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_535,rmse,0.1694559752941131,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,HP1504101T2D_B4,pearson,0.6293470859527588,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,HP1504101T2D_B4,rmse,0.2681375443935394,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1578,pearson,0.6224115490913391,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1578,rmse,0.2332941889762878,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,HP1526901T2D_O10,pearson,0.7349158525466919,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,HP1526901T2D_O10,rmse,0.2208069860935211,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1482,pearson,0.4796566665172577,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1482,rmse,0.1791388690471649,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D31-8_70,pearson,0.7463102340698242,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D31-8_70,rmse,0.2373963445425033,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1312,pearson,0.5662043690681458,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1312,rmse,0.1568739265203476,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,HP1508501T2D_G22,pearson,0.6447741389274597,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,HP1508501T2D_G22,rmse,0.2803858518600464,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1542,pearson,0.6547449231147766,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1542,rmse,0.2643092572689056,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,HP1506401_E3,pearson,0.6792693734169006,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,HP1506401_E3,rmse,0.221599593758583,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1293,pearson,0.5546755790710449,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1293,rmse,0.2352898865938186,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D17All1_2,pearson,0.7540880441665649,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D17All1_2,rmse,0.2565671801567077,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1583,pearson,0.6844640970230103,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1583,rmse,0.2354660332202911,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D2ex_41,pearson,0.7952612638473511,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D2ex_41,rmse,0.3575625419616699,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1214,pearson,0.6020925045013428,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1214,rmse,0.2229934334754943,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,HP1502401_G12,pearson,0.7705021500587463,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,HP1502401_G12,rmse,0.2058089822530746,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1565,pearson,0.6776691675186157,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1565,rmse,0.2227154076099395,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D31-1_80,pearson,0.7495951652526855,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D31-1_80,rmse,0.2441345900297165,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1572,pearson,0.6024883985519409,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1572,rmse,0.3133293688297272,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,HP1504101T2D_D18,pearson,0.6822136044502258,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,HP1504101T2D_D18,rmse,0.2438275068998336,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1309,pearson,0.5009132027626038,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1309,rmse,0.1986018568277359,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,HP1502401_B15,pearson,0.7301082611083984,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,HP1502401_B15,rmse,0.2415827363729477,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1537,pearson,0.7225125432014465,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1537,rmse,0.2535332143306732,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D29-6_88,pearson,0.7064432501792908,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D29-6_88,rmse,0.2735199332237243,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1458,pearson,0.4497765004634857,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1458,rmse,0.1811642944812774,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D17All1_18,pearson,0.638911783695221,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D17All1_18,rmse,0.2896000146865845,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1582,pearson,0.7093445062637329,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1582,rmse,0.2385611981153488,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,HP1504901_H19,pearson,0.6327689290046692,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,HP1504901_H19,rmse,0.2674691379070282,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1320,pearson,0.5825861692428589,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1320,rmse,0.197528675198555,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D28-2_37,pearson,0.8051502108573914,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D28-2_37,rmse,0.2339533120393753,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_535,pearson,0.5490153431892395,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_535,rmse,0.1671470999717712,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,HP1504101T2D_B4,pearson,0.6842675805091858,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,HP1504101T2D_B4,rmse,0.2472182959318161,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1578,pearson,0.604840874671936,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1578,rmse,0.2384209632873535,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,HP1526901T2D_O10,pearson,0.7463791370391846,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,HP1526901T2D_O10,rmse,0.214215412735939,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1482,pearson,0.319638580083847,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1482,rmse,0.20220547914505,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D31-8_70,pearson,0.7424429059028625,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D31-8_70,rmse,0.2400091737508773,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1312,pearson,0.5797193646430969,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1312,rmse,0.1584815680980682,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,HP1508501T2D_G22,pearson,0.676696240901947,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,HP1508501T2D_G22,rmse,0.2702023983001709,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1542,pearson,0.6629868149757385,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1542,rmse,0.2618714272975921,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,HP1506401_E3,pearson,0.7290233969688416,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,HP1506401_E3,rmse,0.2086069136857986,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1293,pearson,0.5646223425865173,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1293,rmse,0.2280016988515854,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D17All1_2,pearson,0.7639903426170349,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D17All1_2,rmse,0.2521095871925354,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1583,pearson,0.6924667954444885,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1583,rmse,0.2322155982255935,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D2ex_41,pearson,0.8130970597267151,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D2ex_41,rmse,0.3433705568313598,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1214,pearson,0.6463872790336609,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1214,rmse,0.2073468118906021,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,HP1502401_G12,pearson,0.2873497903347015,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,HP1502401_G12,rmse,0.3779326677322387,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1565,pearson,0.1394559890031814,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1565,rmse,0.4063369333744049,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D31-1_80,pearson,0.3509910404682159,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D31-1_80,rmse,0.4318854808807373,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1572,pearson,0.2272714674472808,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1572,rmse,0.4904231131076813,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,HP1504101T2D_D18,pearson,0.2342281639575958,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,HP1504101T2D_D18,rmse,0.4416937232017517,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1309,pearson,0.3635981976985931,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1309,rmse,0.373128741979599,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,HP1502401_B15,pearson,0.3329266607761383,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,HP1502401_B15,rmse,0.3712582290172577,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1537,pearson,0.5540165901184082,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1537,rmse,0.3140887022018432,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D29-6_88,pearson,0.424932450056076,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D29-6_88,rmse,0.37850022315979,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1458,pearson,0.3144213557243347,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1458,rmse,0.3157852292060852,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D17All1_18,pearson,0.4191599786281585,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D17All1_18,rmse,0.3630277514457702,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1582,pearson,0.3687504231929779,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1582,rmse,0.3556588888168335,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,HP1504901_H19,pearson,0.3052110075950622,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,HP1504901_H19,rmse,0.3403604030609131,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1320,pearson,0.4506313502788543,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1320,rmse,0.2268547713756561,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D28-2_37,pearson,0.5576333999633789,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D28-2_37,rmse,0.3329164385795593,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_535,pearson,0.3567193150520324,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_535,rmse,0.282874584197998,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,HP1504101T2D_B4,pearson,0.4239228963851928,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,HP1504101T2D_B4,rmse,0.3644598126411438,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1578,pearson,0.2747551500797272,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1578,rmse,0.3858813643455505,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,HP1526901T2D_O10,pearson,0.345536857843399,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,HP1526901T2D_O10,rmse,0.3818148970603943,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1482,pearson,0.1830292791128158,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1482,rmse,0.3760808110237121,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D31-8_70,pearson,0.5583578944206238,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D31-8_70,rmse,0.2988143861293793,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1312,pearson,0.4636195003986358,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1312,rmse,0.2312108129262924,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,HP1508501T2D_G22,pearson,0.4928012788295746,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,HP1508501T2D_G22,rmse,0.3314716219902038,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1542,pearson,0.4552213549613952,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1542,rmse,0.3376788794994354,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,HP1506401_E3,pearson,0.2707423567771911,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,HP1506401_E3,rmse,0.3681458830833435,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1293,pearson,0.2928362190723419,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1293,rmse,0.3504429161548614,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D17All1_2,pearson,0.5959065556526184,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D17All1_2,rmse,0.3136298954486847,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1583,pearson,0.5249289274215698,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1583,rmse,0.2817642986774444,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D2ex_41,pearson,0.243382915854454,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D2ex_41,rmse,0.5907774567604065,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1214,pearson,0.5215173959732056,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1214,rmse,0.260444313287735,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D102_54,pearson,0.914745271205902,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D102_54,rmse,0.2448775470256805,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1303,pearson,0.568503737449646,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1303,rmse,0.24005126953125,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D28-1_51,pearson,0.8068833947181702,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D28-1_51,rmse,0.2009847462177276,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1475,pearson,0.5035273432731628,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1475,rmse,0.1730800867080688,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,3rd-C44_S32,pearson,0.4890666007995605,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,3rd-C44_S32,rmse,0.3929613530635834,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1566,pearson,0.6001892685890198,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1566,rmse,0.2589970529079437,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D29-7_60,pearson,0.7742651104927063,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D29-7_60,rmse,0.2406589388847351,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1325,pearson,0.6051545143127441,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1325,rmse,0.2041834443807602,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D29-4_20,pearson,0.7190086245536804,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D29-4_20,rmse,0.2721020579338074,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1580,pearson,0.6794215440750122,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1580,rmse,0.2190258502960205,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D29-1_72,pearson,0.7862765789031982,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D29-1_72,rmse,0.2407842874526977,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1397,pearson,0.6045325994491577,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1397,rmse,0.1632501780986786,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,HP1506401_K22,pearson,0.7688019871711731,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,HP1506401_K22,rmse,0.2209612727165222,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1493,pearson,0.5411220192909241,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1493,rmse,0.1618251949548721,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D29-1_66,pearson,0.6701858043670654,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D29-1_66,rmse,0.2865506112575531,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1516,pearson,0.5941107869148254,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1516,rmse,0.1510570496320724,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D101_5,pearson,0.5769286155700684,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D101_5,rmse,0.3173095881938934,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1354,pearson,0.5129827260971069,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1354,rmse,0.1891257017850875,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D29-8_48,pearson,0.718868613243103,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D29-8_48,rmse,0.2805901765823364,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1587,pearson,0.5742923617362976,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1587,rmse,0.2858027517795563,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D29-7_93,pearson,0.7460145950317383,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D29-7_93,rmse,0.2527660727500915,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1571,pearson,0.6235050559043884,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1571,rmse,0.2466199696063995,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D31-7_15,pearson,0.6815534234046936,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D31-7_15,rmse,0.280200183391571,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1553,pearson,0.6574043035507202,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1553,rmse,0.2657004594802856,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D172444_23,pearson,0.6016120314598083,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D172444_23,rmse,0.3180460035800934,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1594,pearson,0.6984502673149109,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1594,rmse,0.2217575013637542,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D31-3_30,pearson,0.7338243126869202,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D31-3_30,rmse,0.2573587894439697,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1259,pearson,0.5443436503410339,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1259,rmse,0.1892726868391037,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D101_7,pearson,0.9246222972869872,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D101_7,rmse,0.2438044100999832,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1540,pearson,0.5925719141960144,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1540,rmse,0.309214174747467,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D102_54,pearson,0.9122263193130492,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D102_54,rmse,0.2424135208129882,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1303,pearson,0.564720630645752,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1303,rmse,0.2413555681705474,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D28-1_51,pearson,0.7831757068634033,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D28-1_51,rmse,0.2104382663965225,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1475,pearson,0.5116746425628662,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1475,rmse,0.1673120558261871,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,3rd-C44_S32,pearson,0.5065792798995972,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,3rd-C44_S32,rmse,0.3877524137496948,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1566,pearson,0.5998232960700989,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1566,rmse,0.2595190405845642,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D29-7_60,pearson,0.7625739574432373,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D29-7_60,rmse,0.2462356090545654,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1325,pearson,0.596915066242218,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1325,rmse,0.2124713808298111,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D29-4_20,pearson,0.7200666069984436,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D29-4_20,rmse,0.271126240491867,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1580,pearson,0.6465868353843689,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1580,rmse,0.2307719141244888,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D29-1_72,pearson,0.8046800494194031,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D29-1_72,rmse,0.2309973537921905,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1397,pearson,0.6512685418128967,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1397,rmse,0.1482407599687576,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,HP1506401_K22,pearson,0.7767754197120667,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,HP1506401_K22,rmse,0.2193905264139175,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1493,pearson,0.4983390867710113,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1493,rmse,0.165970966219902,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D29-1_66,pearson,0.6705759167671204,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D29-1_66,rmse,0.2865508198738098,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1516,pearson,0.5994259715080261,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1516,rmse,0.1496006846427917,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D101_5,pearson,0.6122109293937683,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D101_5,rmse,0.3059491217136383,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1354,pearson,0.4984972178936004,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1354,rmse,0.1930334120988845,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D29-8_48,pearson,0.7322460412979126,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D29-8_48,rmse,0.2762826681137085,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1587,pearson,0.572022020816803,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1587,rmse,0.2831547856330871,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D29-7_93,pearson,0.7585902214050293,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D29-7_93,rmse,0.2477609813213348,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1571,pearson,0.6198848485946655,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1571,rmse,0.2491011619567871,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D31-7_15,pearson,0.6464961767196655,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D31-7_15,rmse,0.2900809049606323,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1553,pearson,0.6630405187606812,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1553,rmse,0.2657559812068939,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D172444_23,pearson,0.604979932308197,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D172444_23,rmse,0.3165810704231262,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1594,pearson,0.6591865420341492,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1594,rmse,0.2423402518033981,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D31-3_30,pearson,0.7120708227157593,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D31-3_30,rmse,0.2658289074897766,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1259,pearson,0.5262344479560852,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1259,rmse,0.1980952322483062,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D101_7,pearson,0.9254617094993592,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D101_7,rmse,0.2440802603960037,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1540,pearson,0.5950385332107544,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1540,rmse,0.3087663054466247,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D102_54,pearson,0.2368863970041275,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D102_54,rmse,0.5868484973907471,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1303,pearson,0.4070013463497162,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1303,rmse,0.2914060950279236,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D28-1_51,pearson,0.5735610127449036,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D28-1_51,rmse,0.3396326601505279,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1475,pearson,0.2650892734527588,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1475,rmse,0.3970767259597778,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,3rd-C44_S32,pearson,0.1761464625597,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,3rd-C44_S32,rmse,0.6146151423454285,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1566,pearson,0.1320845931768417,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1566,rmse,0.5719805955886841,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D29-7_60,pearson,0.2274301052093505,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D29-7_60,rmse,0.4345274567604065,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1325,pearson,0.3715596497058868,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1325,rmse,0.314109593629837,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D29-4_20,pearson,0.3921492993831634,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D29-4_20,rmse,0.4143183529376983,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1580,pearson,0.2569104433059692,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1580,rmse,0.4130951464176178,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D29-1_72,pearson,0.43205526471138,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D29-1_72,rmse,0.3545925915241241,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1397,pearson,0.441397488117218,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1397,rmse,0.2114664018154144,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,HP1506401_K22,pearson,0.427777349948883,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,HP1506401_K22,rmse,0.3524509966373443,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1493,pearson,0.2782489657402038,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1493,rmse,0.3177578747272491,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D29-1_66,pearson,0.460090309381485,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D29-1_66,rmse,0.3676037490367889,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1516,pearson,0.3164947032928467,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1516,rmse,0.3099273443222046,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D101_5,pearson,0.4258451759815216,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D101_5,rmse,0.3608879446983337,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1354,pearson,0.3099488914012909,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1354,rmse,0.2777457237243652,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D29-8_48,pearson,0.3052676618099212,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D29-8_48,rmse,0.4146513938903808,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1587,pearson,0.1625323891639709,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1587,rmse,0.4053809940814972,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D29-7_93,pearson,0.2939278781414032,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D29-7_93,rmse,0.4176620841026306,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1571,pearson,0.1572770476341247,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1571,rmse,0.4243878126144409,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D31-7_15,pearson,0.4763204157352447,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D31-7_15,rmse,0.33811154961586,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1553,pearson,0.3225460350513458,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1553,rmse,0.3418812453746795,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D172444_23,pearson,0.2148335427045822,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D172444_23,rmse,0.5270541310310364,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1594,pearson,0.1376292109489441,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1594,rmse,0.4984619617462158,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D31-3_30,pearson,0.2778010964393616,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D31-3_30,rmse,0.5156593322753906,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1259,pearson,0.2559554874897003,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1259,rmse,0.4953961372375488,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D101_7,pearson,-0.0197946317493915,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D101_7,rmse,0.675968587398529,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1540,pearson,0.3739810883998871,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1540,rmse,0.3626379668712616,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D17All2_14,pearson,0.7524983882904053,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D17All2_14,rmse,0.2272985875606537,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1303,pearson,0.6318458914756775,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1303,rmse,0.2215301543474197,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D29-1_15,pearson,0.6705946922302246,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D29-1_15,rmse,0.2820649743080139,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1277,pearson,0.602242112159729,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1277,rmse,0.2227578610181808,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,HP1504901_I22,pearson,0.5796086192131042,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,HP1504901_I22,rmse,0.3246385455131531,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1592,pearson,0.6155003905296326,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1592,rmse,0.2850549817085266,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D28-1_85,pearson,0.8595510125160217,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D28-1_85,rmse,0.2390056550502777,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1501,pearson,0.3574357628822326,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1501,rmse,0.1926985830068588,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,HP1504901_M4,pearson,0.5160036087036133,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,HP1504901_M4,rmse,0.290243536233902,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1514,pearson,0.5585438013076782,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1514,rmse,0.1797387599945068,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D29-7_40,pearson,0.6855263113975525,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D29-7_40,rmse,0.2712208926677704,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1430,pearson,0.5905945897102356,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1430,rmse,0.1722332537174224,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,HP1526901T2D_K11,pearson,0.7504055500030518,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,HP1526901T2D_K11,rmse,0.2267561256885528,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1565,pearson,0.686412513256073,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1565,rmse,0.2145816087722778,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,AZ_D8,pearson,0.7326579689979553,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,AZ_D8,rmse,0.2431020885705948,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1247,pearson,0.5942466855049133,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1247,rmse,0.2145147770643234,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,HP1504101T2D_B4,pearson,0.6097733378410339,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,HP1504101T2D_B4,rmse,0.2686234712600708,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1595,pearson,0.617163360118866,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1595,rmse,0.284893274307251,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,HP1504101T2D_E14,pearson,0.7438281774520874,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,HP1504101T2D_E14,rmse,0.221256211400032,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1042,pearson,0.4985761344432831,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1042,rmse,0.1839006096124649,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,HP1506401_G8,pearson,0.7836146950721741,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,HP1506401_G8,rmse,0.2053350508213043,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1373,pearson,0.3116538822650909,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1373,rmse,0.2193002104759216,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D29-2_87,pearson,0.7865327000617981,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D29-2_87,rmse,0.2258174568414688,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1476,pearson,0.4379942715167999,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1476,rmse,0.2476346492767334,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,9th-C79_S57,pearson,0.5955216288566589,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,9th-C79_S57,rmse,0.316632330417633,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1567,pearson,0.5658335089683533,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1567,rmse,0.2720405459403991,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D17All2_85,pearson,0.6930191516876221,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D17All2_85,rmse,0.2779742479324341,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1446,pearson,0.5467169284820557,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1446,rmse,0.1885591894388198,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D29-7_8,pearson,0.6925907135009766,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D29-7_8,rmse,0.2652452886104584,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1438,pearson,0.4774788022041321,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1438,rmse,0.2212958484888076,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D17All2_14,pearson,0.758762538433075,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D17All2_14,rmse,0.2242158353328704,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1303,pearson,0.6312964558601379,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1303,rmse,0.218369573354721,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D29-1_15,pearson,0.6502856016159058,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D29-1_15,rmse,0.289140522480011,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1277,pearson,0.6621906161308289,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1277,rmse,0.2010156363248825,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,HP1504901_I22,pearson,0.5995276570320129,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,HP1504901_I22,rmse,0.3155287206172943,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1592,pearson,0.6447252631187439,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1592,rmse,0.275695264339447,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D28-1_85,pearson,0.8524819016456604,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D28-1_85,rmse,0.2514896094799042,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1501,pearson,0.3683488667011261,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1501,rmse,0.1929471939802169,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,HP1504901_M4,pearson,0.5591779947280884,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,HP1504901_M4,rmse,0.2741824984550476,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1514,pearson,0.6148024797439575,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1514,rmse,0.1518384963274002,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D29-7_40,pearson,0.7175295352935791,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D29-7_40,rmse,0.257425308227539,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1430,pearson,0.5454135537147522,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1430,rmse,0.2045455276966095,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,HP1526901T2D_K11,pearson,0.7480594515800476,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,HP1526901T2D_K11,rmse,0.230898231267929,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1565,pearson,0.7198434472084045,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1565,rmse,0.2044407278299331,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,AZ_D8,pearson,0.7381585240364075,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,AZ_D8,rmse,0.240486666560173,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1247,pearson,0.612970769405365,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1247,rmse,0.1764225214719772,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,HP1504101T2D_B4,pearson,0.6663779616355896,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,HP1504101T2D_B4,rmse,0.2526619434356689,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1595,pearson,0.6535807251930237,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1595,rmse,0.2717381119728088,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,HP1504101T2D_E14,pearson,0.7647234201431274,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,HP1504101T2D_E14,rmse,0.2137934416532516,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1042,pearson,0.5492846369743347,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1042,rmse,0.1703881174325943,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,HP1506401_G8,pearson,0.7953692078590393,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,HP1506401_G8,rmse,0.2018008083105087,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1373,pearson,0.337537944316864,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1373,rmse,0.222607210278511,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D29-2_87,pearson,0.7795465588569641,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D29-2_87,rmse,0.2299016118049621,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1476,pearson,0.4181366562843323,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1476,rmse,0.2516193091869354,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,9th-C79_S57,pearson,0.5935174226760864,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,9th-C79_S57,rmse,0.320141851902008,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1567,pearson,0.6005526185035706,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1567,rmse,0.2610561847686767,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D17All2_85,pearson,0.6942229866981506,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D17All2_85,rmse,0.275522917509079,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1446,pearson,0.5494676828384399,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1446,rmse,0.1830594092607498,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D29-7_8,pearson,0.7317193150520325,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D29-7_8,rmse,0.2507814764976501,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1438,pearson,0.4942751824855804,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1438,rmse,0.2173544466495514,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D17All2_14,pearson,0.5301082134246826,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D17All2_14,rmse,0.3264302611351013,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1303,pearson,0.3589026629924774,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1303,rmse,0.3507277071475982,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D29-1_15,pearson,0.2826566994190216,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D29-1_15,rmse,0.4190039336681366,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1277,pearson,0.3946084082126617,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1277,rmse,0.3239142596721649,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,HP1504901_I22,pearson,0.2433098405599594,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,HP1504901_I22,rmse,0.4163871109485626,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1592,pearson,0.250820130109787,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1592,rmse,0.3888305723667145,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D28-1_85,pearson,0.6417063474655151,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D28-1_85,rmse,0.3663360774517059,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1501,pearson,0.3228675723075866,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1501,rmse,0.2351634204387664,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,HP1504901_M4,pearson,0.298060655593872,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,HP1504901_M4,rmse,0.3832918405532837,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1514,pearson,0.3056006729602813,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1514,rmse,0.3187263906002044,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D29-7_40,pearson,0.5001205801963806,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D29-7_40,rmse,0.3537660539150238,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1430,pearson,0.4376961886882782,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1430,rmse,0.3099108338356018,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,HP1526901T2D_K11,pearson,0.4082212448120117,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,HP1526901T2D_K11,rmse,0.3488988876342773,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1565,pearson,0.2964947819709778,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1565,rmse,0.3606980443000793,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,AZ_D8,pearson,0.3824261426925659,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,AZ_D8,rmse,0.3772858381271362,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1247,pearson,0.4097052216529846,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1247,rmse,0.3097971975803375,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,HP1504101T2D_B4,pearson,0.3732164800167084,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,HP1504101T2D_B4,rmse,0.340449184179306,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1595,pearson,0.3706914186477661,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1595,rmse,0.3560450971126556,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,HP1504101T2D_E14,pearson,0.2237633317708969,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,HP1504101T2D_E14,rmse,0.3923967182636261,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1042,pearson,0.3907014727592468,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1042,rmse,0.2835241258144378,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,HP1506401_G8,pearson,0.4456292688846588,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,HP1506401_G8,rmse,0.3570911586284637,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1373,pearson,0.2167805582284927,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1373,rmse,0.35738405585289,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D29-2_87,pearson,0.3503114581108093,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D29-2_87,rmse,0.5218889713287354,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1476,pearson,0.3043252527713775,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1476,rmse,0.5228118300437927,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,9th-C79_S57,pearson,0.3298062086105346,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,9th-C79_S57,rmse,0.4469975233078003,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1567,pearson,0.2006150633096695,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1567,rmse,0.449376106262207,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D17All2_85,pearson,0.3605208694934845,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D17All2_85,rmse,0.3615964353084564,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1446,pearson,0.3920850157737732,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1446,rmse,0.2042434811592102,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D29-7_8,pearson,0.3695911467075348,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D29-7_8,rmse,0.3890994489192962,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1438,pearson,0.4292142391204834,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1438,rmse,0.3129176795482635,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D29-7_36,pearson,0.6880738139152527,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D29-7_36,rmse,0.2776854336261749,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1257,pearson,0.4839612543582916,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1257,rmse,0.1914033144712448,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,HP1526901T2D_J17,pearson,0.6944892406463623,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,HP1526901T2D_J17,rmse,0.266714483499527,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1464,pearson,0.5401694774627686,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1464,rmse,0.1938222497701645,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D28-4_38,pearson,0.7743456363677979,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D28-4_38,rmse,0.2626294791698456,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1576,pearson,0.5994536876678467,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1576,rmse,0.291502296924591,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,HP1504101T2D_B12,pearson,0.7456135749816895,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,HP1504101T2D_B12,rmse,0.2307140678167343,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1472,pearson,0.5035607218742371,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1472,rmse,0.2227752655744552,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D29-7_35,pearson,0.7496790885925293,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D29-7_35,rmse,0.2377572804689407,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1514,pearson,0.5516268014907837,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1514,rmse,0.1794498115777969,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D29-2_68,pearson,0.8149546384811401,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D29-2_68,rmse,0.2114894390106201,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1484,pearson,0.3969128429889679,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1484,rmse,0.2385295182466507,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D17All2_28,pearson,0.6223647594451904,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D17All2_28,rmse,0.2895134091377258,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1538,pearson,0.7470868825912476,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1538,rmse,0.2309642434120178,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D31-4_40,pearson,0.6910711526870728,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D31-4_40,rmse,0.2822833657264709,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1369,pearson,0.6279506683349609,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1369,rmse,0.1771904677152633,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D29-5_6,pearson,0.789711058139801,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D29-5_6,rmse,0.2229619473218917,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1440,pearson,0.4910742342472076,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1440,rmse,0.2009523659944534,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,HP1506401_B4,pearson,0.768389880657196,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,HP1506401_B4,rmse,0.2071901261806488,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1411,pearson,0.5841003656387329,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1411,rmse,0.200506180524826,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D29-6_4,pearson,0.795654296875,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D29-6_4,rmse,0.2278462350368499,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1568,pearson,0.5598772764205933,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1568,rmse,0.2991211116313934,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D28-1_38,pearson,0.934499979019165,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D28-1_38,rmse,0.205040618777275,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1461,pearson,0.7123317122459412,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1461,rmse,0.158271387219429,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D17All2_14,pearson,0.7628607749938965,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D17All2_14,rmse,0.2243872880935669,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1594,pearson,0.6734721064567566,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1594,rmse,0.250852108001709,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,HP1504901_D9,pearson,0.5792626738548279,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,HP1504901_D9,rmse,0.2836571633815765,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1516,pearson,0.5468765497207642,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1516,rmse,0.1601685434579849,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D2ex_70,pearson,0.9175454378128052,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D2ex_70,rmse,0.2621931731700897,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1159,pearson,0.6468250751495361,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1159,rmse,0.1648702621459961,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D29-7_36,pearson,0.7038623094558716,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D29-7_36,rmse,0.2716297209262848,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1257,pearson,0.4869330525398254,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1257,rmse,0.1954312920570373,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,HP1526901T2D_J17,pearson,0.6896657943725586,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,HP1526901T2D_J17,rmse,0.2692233622074127,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1464,pearson,0.5264084339141846,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1464,rmse,0.2148247510194778,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D28-4_38,pearson,0.7980424165725708,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D28-4_38,rmse,0.2481931298971176,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1576,pearson,0.5332458019256592,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1576,rmse,0.3092919886112213,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,HP1504101T2D_B12,pearson,0.729770839214325,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,HP1504101T2D_B12,rmse,0.2385842502117157,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1472,pearson,0.4900804162025451,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1472,rmse,0.2171399146318435,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D29-7_35,pearson,0.7260911464691162,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D29-7_35,rmse,0.2466019093990326,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1514,pearson,0.6015293598175049,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1514,rmse,0.1720345318317413,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D29-2_68,pearson,0.7938629388809204,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D29-2_68,rmse,0.2223216593265533,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1484,pearson,0.4666285216808319,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1484,rmse,0.1915572732686996,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D17All2_28,pearson,0.6471973657608032,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D17All2_28,rmse,0.2811522781848907,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1538,pearson,0.7566238641738892,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1538,rmse,0.2272143512964248,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D31-4_40,pearson,0.6966528296470642,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D31-4_40,rmse,0.2729061543941498,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1369,pearson,0.6091718673706055,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1369,rmse,0.1895910501480102,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D29-5_6,pearson,0.7898398041725159,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D29-5_6,rmse,0.22238090634346,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1440,pearson,0.5398157835006714,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1440,rmse,0.1666626781225204,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,HP1506401_B4,pearson,0.7620055079460144,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,HP1506401_B4,rmse,0.2097315788269043,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1411,pearson,0.5736241340637207,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1411,rmse,0.1995320916175842,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D29-6_4,pearson,0.7991549968719482,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D29-6_4,rmse,0.2260076999664306,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1568,pearson,0.5615628361701965,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1568,rmse,0.2988183498382568,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D28-1_38,pearson,0.9404317736625672,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D28-1_38,rmse,0.1944505423307418,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1461,pearson,0.6647596955299377,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1461,rmse,0.1792225986719131,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D17All2_14,pearson,0.7512495517730713,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D17All2_14,rmse,0.2310185730457306,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1594,pearson,0.6802666783332825,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1594,rmse,0.2280747145414352,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,HP1504901_D9,pearson,0.5231237411499023,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,HP1504901_D9,rmse,0.2984833419322967,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1516,pearson,0.509427547454834,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1516,rmse,0.1755634546279907,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D2ex_70,pearson,0.9094595313072203,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D2ex_70,rmse,0.2747657001018524,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1159,pearson,0.5692279934883118,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1159,rmse,0.1805995255708694,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D29-7_36,pearson,0.5261206030845642,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D29-7_36,rmse,0.4179241061210632,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1257,pearson,0.3642149269580841,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1257,rmse,0.4524498581886291,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,HP1526901T2D_J17,pearson,0.3860727846622467,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,HP1526901T2D_J17,rmse,0.3854143023490906,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1464,pearson,0.3012766242027282,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1464,rmse,0.3381321728229522,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D28-4_38,pearson,0.4950324594974518,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D28-4_38,rmse,0.3661006391048431,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1576,pearson,0.3491770625114441,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1576,rmse,0.348034143447876,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,HP1504101T2D_B12,pearson,0.2744534015655517,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,HP1504101T2D_B12,rmse,0.3981318473815918,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1472,pearson,0.163982480764389,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1472,rmse,0.3627743124961853,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D29-7_35,pearson,0.1255005449056625,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D29-7_35,rmse,0.4244411885738373,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1514,pearson,0.2826851010322571,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1514,rmse,0.2833419442176819,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D29-2_68,pearson,0.6304581165313721,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D29-2_68,rmse,0.3372978866100311,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1484,pearson,0.1904627084732055,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1484,rmse,0.424304336309433,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D17All2_28,pearson,0.3349178731441498,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D17All2_28,rmse,0.4296610653400421,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1538,pearson,0.3989673256874084,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1538,rmse,0.4037461578845978,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D31-4_40,pearson,0.3697846233844757,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D31-4_40,rmse,0.3750602602958679,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1369,pearson,0.3665791451931,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1369,rmse,0.277336984872818,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D29-5_6,pearson,0.5745952725410461,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D29-5_6,rmse,0.3475074172019958,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1440,pearson,0.3898195326328277,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1440,rmse,0.3642675578594208,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,HP1506401_B4,pearson,0.3840212821960449,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,HP1506401_B4,rmse,0.3065256774425506,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1411,pearson,0.4585333466529846,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1411,rmse,0.2235906422138214,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D29-6_4,pearson,0.5025133490562439,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D29-6_4,rmse,0.3501822054386139,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1568,pearson,0.362280011177063,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1568,rmse,0.3846645355224609,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D28-1_38,pearson,0.318942129611969,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D28-1_38,rmse,0.5446365475654602,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1461,pearson,0.4587295055389404,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1461,rmse,0.2768508195877075,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D17All2_14,pearson,0.2956038117408752,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D17All2_14,rmse,0.4008819460868835,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1594,pearson,0.2676738202571869,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1594,rmse,0.3810696899890899,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,HP1504901_D9,pearson,0.1441254466772079,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,HP1504901_D9,rmse,0.599909245967865,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1516,pearson,0.2250741422176361,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1516,rmse,0.5419663190841675,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D2ex_70,pearson,0.3470748662948608,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D2ex_70,rmse,0.6363941431045532,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1159,pearson,0.1908684223890304,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1159,rmse,0.3610411584377289,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,HP1504101T2D_M3,pearson,0.7066797614097595,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,HP1504101T2D_M3,rmse,0.2369295209646225,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1449,pearson,0.511538028717041,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1449,rmse,0.1719923764467239,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D29-1_73,pearson,0.7274618744850159,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D29-1_73,rmse,0.2498081028461456,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1562,pearson,0.6500545740127563,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1562,rmse,0.2657473087310791,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D10631_91,pearson,0.8754022717475891,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D10631_91,rmse,0.2902608513832092,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1435,pearson,0.3747445344924927,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1435,rmse,0.2270007878541946,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D30-6_90,pearson,0.7209005355834961,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D30-6_90,rmse,0.2740857303142547,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1588,pearson,0.5849594473838806,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1588,rmse,0.2589505314826965,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D29-1_15,pearson,0.7028958201408386,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D29-1_15,rmse,0.2702800035476684,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1557,pearson,0.5678204298019409,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1557,rmse,0.2895177602767944,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D17All2_63,pearson,0.6545181274414062,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D17All2_63,rmse,0.2670787870883941,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1587,pearson,0.5979989767074585,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1587,rmse,0.2759862244129181,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D31-4_40,pearson,0.6854334473609924,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D31-4_40,rmse,0.2778269648551941,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_887,pearson,0.698928952217102,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_887,rmse,0.2562593817710876,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,HP1506401_D9,pearson,0.7897677421569824,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,HP1506401_D9,rmse,0.1995948553085327,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1522,pearson,0.6990500688552856,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1522,rmse,0.2542974650859833,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D29-1_86,pearson,0.7313041090965271,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D29-1_86,rmse,0.2479367703199386,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1554,pearson,0.6324998140335083,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1554,rmse,0.2193999290466308,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D17All2_38,pearson,0.6584280729293823,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D17All2_38,rmse,0.3055160045623779,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1592,pearson,0.6444712281227112,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1592,rmse,0.2757526040077209,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,HP1504101T2D_N20,pearson,0.6070679426193237,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,HP1504101T2D_N20,rmse,0.2565724551677704,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1295,pearson,0.497959166765213,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1295,rmse,0.226204052567482,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D73_20,pearson,0.652830958366394,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D73_20,rmse,0.3113229870796203,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1582,pearson,0.7126604914665222,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1582,rmse,0.2369173616170883,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D30-2_45,pearson,0.8874137997627258,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D30-2_45,rmse,0.2584750056266784,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1589,pearson,0.6537922620773315,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1589,rmse,0.2571287155151367,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,HP1504101T2D_I19,pearson,0.6584898829460144,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,HP1504101T2D_I19,rmse,0.2393207550048828,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1084,pearson,0.6194838285446167,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1084,rmse,0.1974621415138244,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D3en3_64,pearson,0.8934428095817566,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,D3en3_64,rmse,0.2929292917251587,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1558,pearson,0.6829790472984314,reconstruction_per_cell.csv
+B,expression_reconstruction,Original explicit embeddings,target_cell,Sample_1558,rmse,0.2810102105140686,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,HP1504101T2D_M3,pearson,0.7192081809043884,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,HP1504101T2D_M3,rmse,0.2352955341339111,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1449,pearson,0.4560461342334747,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1449,rmse,0.2139880061149597,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D29-1_73,pearson,0.7164258360862732,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D29-1_73,rmse,0.2544351816177368,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1562,pearson,0.6256420612335205,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1562,rmse,0.2728156745433807,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D10631_91,pearson,0.8761090040206909,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D10631_91,rmse,0.2891361713409424,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1435,pearson,0.4260625541210174,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1435,rmse,0.2104563117027282,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D30-6_90,pearson,0.7124090790748596,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D30-6_90,rmse,0.2773836255073547,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1588,pearson,0.562028706073761,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1588,rmse,0.2807180881500244,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D29-1_15,pearson,0.7163798213005066,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D29-1_15,rmse,0.2664015293121338,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1557,pearson,0.5963627099990845,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1557,rmse,0.2788603901863098,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D17All2_63,pearson,0.6657933592796326,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D17All2_63,rmse,0.2642009854316711,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1587,pearson,0.584460973739624,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1587,rmse,0.2793089151382446,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D31-4_40,pearson,0.7071427702903748,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D31-4_40,rmse,0.2686173021793365,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_887,pearson,0.7052450180053711,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_887,rmse,0.254027247428894,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,HP1506401_D9,pearson,0.7900884747505188,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,HP1506401_D9,rmse,0.209595501422882,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1522,pearson,0.682571291923523,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1522,rmse,0.2639962434768677,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D29-1_86,pearson,0.7233242392539978,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D29-1_86,rmse,0.2515174448490143,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1554,pearson,0.6446284055709839,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1554,rmse,0.2207483947277069,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D17All2_38,pearson,0.6520220041275024,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D17All2_38,rmse,0.3079251646995544,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1592,pearson,0.6431922316551208,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1592,rmse,0.2768150866031647,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,HP1504101T2D_N20,pearson,0.5935011506080627,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,HP1504101T2D_N20,rmse,0.2595645785331726,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1295,pearson,0.5178202390670776,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1295,rmse,0.2369409203529358,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D73_20,pearson,0.6544293761253357,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D73_20,rmse,0.3105702400207519,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1582,pearson,0.6927552223205566,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1582,rmse,0.2451874911785125,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D30-2_45,pearson,0.8906864523887634,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D30-2_45,rmse,0.2518766522407532,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1589,pearson,0.6526873111724854,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1589,rmse,0.2538291215896606,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,HP1504101T2D_I19,pearson,0.6584810018539429,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,HP1504101T2D_I19,rmse,0.249753937125206,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1084,pearson,0.6205328106880188,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1084,rmse,0.2026933133602142,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D3en3_64,pearson,0.8883506655693054,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,D3en3_64,rmse,0.2942761480808258,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1558,pearson,0.6614785194396973,reconstruction_per_cell.csv
+B,expression_reconstruction,Remote A/B ($\sigma$ = 0),target_cell,Sample_1558,rmse,0.2893776893615722,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,HP1504101T2D_M3,pearson,0.5724442601203918,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,HP1504101T2D_M3,rmse,0.2832304537296295,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1449,pearson,0.322780579328537,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1449,rmse,0.2708453238010406,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D29-1_73,pearson,0.2092408388853073,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D29-1_73,rmse,0.4984259307384491,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1562,pearson,0.2049853950738906,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1562,rmse,0.4932236671447754,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D10631_91,pearson,0.1850023567676544,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D10631_91,rmse,0.6282632946968079,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1435,pearson,0.3720951080322265,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1435,rmse,0.3159154653549194,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D30-6_90,pearson,0.4349864423274994,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D30-6_90,rmse,0.3867986798286438,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1588,pearson,0.2869188785552978,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1588,rmse,0.3851487934589386,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D29-1_15,pearson,0.2289256751537323,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D29-1_15,rmse,0.4115391373634338,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1557,pearson,0.2477053850889206,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1557,rmse,0.3751769363880157,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D17All2_63,pearson,0.3689365684986114,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D17All2_63,rmse,0.4207252264022827,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1587,pearson,0.2498166114091873,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1587,rmse,0.4549541771411896,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D31-4_40,pearson,0.4035468995571136,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D31-4_40,rmse,0.4095441102981567,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_887,pearson,0.2360221594572067,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_887,rmse,0.448303610086441,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,HP1506401_D9,pearson,0.3624127209186554,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,HP1506401_D9,rmse,0.4745249152183532,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1522,pearson,0.3552302718162536,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1522,rmse,0.4885576665401459,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D29-1_86,pearson,0.4208346605300903,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D29-1_86,rmse,0.368006557226181,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1554,pearson,0.2388533502817154,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1554,rmse,0.3762651085853576,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D17All2_38,pearson,0.4376680552959442,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D17All2_38,rmse,0.3918846547603607,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1592,pearson,0.4118902683258056,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1592,rmse,0.3713205754756927,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,HP1504101T2D_N20,pearson,0.270718514919281,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,HP1504101T2D_N20,rmse,0.4064607918262481,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1295,pearson,0.3569384515285492,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1295,rmse,0.3546525239944458,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D73_20,pearson,0.4411235153675079,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D73_20,rmse,0.3697457909584045,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1582,pearson,0.3783139288425445,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1582,rmse,0.3249799609184265,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D30-2_45,pearson,0.3281022012233734,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D30-2_45,rmse,0.5545513033866882,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1589,pearson,0.3776218891143799,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1589,rmse,0.3817757666110992,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,HP1504101T2D_I19,pearson,0.1570052206516266,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,HP1504101T2D_I19,rmse,0.7204038500785828,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1084,pearson,0.1353268027305603,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1084,rmse,0.7017260789871216,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D3en3_64,pearson,0.0245369225740432,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,D3en3_64,rmse,0.7026848196983337,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1558,pearson,0.4547393321990967,reconstruction_per_cell.csv
+B,expression_reconstruction,Final FederatedBatch,target_cell,Sample_1558,rmse,0.366037517786026,reconstruction_per_cell.csv
+C,analytic_gaussian_accounting,Joint cell-level Gaussian release,sigma,0.5,epsilon_delta_1e-5,9.9972561464343,privacy_accounting.csv
+C,analytic_gaussian_accounting,Joint cell-level Gaussian release,sigma,1.0,epsilon_delta_1e-5,4.377178095681234,privacy_accounting.csv
+C,analytic_gaussian_accounting,Joint cell-level Gaussian release,sigma,2.0,epsilon_delta_1e-5,1.99309140441512,privacy_accounting.csv
+C,analytic_gaussian_accounting,Joint cell-level Gaussian release,sigma,4.0,epsilon_delta_1e-5,0.9263415039983884,privacy_accounting.csv
+D,secure_runtime,plaintext,repetition,1,wall_clock_seconds,0.1142962258309125,runtime_benchmark.csv
+D,secure_runtime,secretflow_spu_aby3,repetition,1,wall_clock_seconds,2.66921547614038,runtime_benchmark.csv
+D,secure_runtime,plaintext,repetition,2,wall_clock_seconds,0.0946977697312831,runtime_benchmark.csv
+D,secure_runtime,secretflow_spu_aby3,repetition,2,wall_clock_seconds,2.676512448117137,runtime_benchmark.csv
+D,secure_runtime,plaintext,repetition,3,wall_clock_seconds,0.1170084495097398,runtime_benchmark.csv
+D,secure_runtime,secretflow_spu_aby3,repetition,3,wall_clock_seconds,2.5790155977010727,runtime_benchmark.csv
+D,secure_correctness,secretflow_spu_aby3,repetition,1,a_relative_l2_error,0.0003476943978923,correctness.csv
+D,secure_correctness,secretflow_spu_aby3,repetition,2,a_relative_l2_error,0.0003391170880261,correctness.csv
+D,secure_correctness,secretflow_spu_aby3,repetition,3,a_relative_l2_error,0.0003366375683351,correctness.csv
+D,secure_correctness,secretflow_spu_aby3,repetition,1,b_relative_l2_error,6.910604252698555e-05,correctness.csv
+D,secure_correctness,secretflow_spu_aby3,repetition,2,b_relative_l2_error,6.7601795592905e-05,correctness.csv
+D,secure_correctness,secretflow_spu_aby3,repetition,3,b_relative_l2_error,6.715179737877001e-05,correctness.csv
+D,secure_correctness,secretflow_spu_aby3,repetition,1,b_cosine_similarity,0.9999999976539772,correctness.csv
+D,secure_correctness,secretflow_spu_aby3,repetition,2,b_cosine_similarity,0.9999999977584746,correctness.csv
+D,secure_correctness,secretflow_spu_aby3,repetition,3,b_cosine_similarity,0.9999999977866942,correctness.csv
+D,secure_correctness,secretflow_spu_aby3,repetition,1,reconstructed_remote_gradient_cosine,0.9636471940143352,correctness.csv
+D,secure_correctness,secretflow_spu_aby3,repetition,2,reconstructed_remote_gradient_cosine,0.999999998032628,correctness.csv
+D,secure_correctness,secretflow_spu_aby3,repetition,3,reconstructed_remote_gradient_cosine,0.9999999975714994,correctness.csv

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "upstream_repository": "https://github.com/Mohammad-Bakhtiari/FedscGen",
+  "upstream_commit": "b266f744fcc0d97ac0db25f00316b6a080929d0a",
+  "upstream_git_blobs": {
+    "LICENSE": "bc790ed953c2358d7da6903982c703e0d8610655",
+    "NOTICE": "d65023df7bb474545712eb9536c7e012c706280e",
+    "fedscgen/FedScGen.py": "56f384ef5bd3d4447e2126658c6383fe76d29c27",
+    "fedscgen/__init__.py": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "fedscgen/plots.py": "96eb529951e1cb219417ad64dabb2d0a30eb26e2",
+    "fedscgen/r_utils.py": "9eee3b3e292347eb887214a9d7d5e70b09e3461d",
+    "fedscgen/scgen_utils.py": "48c9583a55461d6d21a5d0aea79b0aad8b6f63b4",
+    "fedscgen/utils.py": "d71c3c701fad7edd953156c685f1a31072754dc3",
+    "licenses/BSD-3-Clause-scgen_utils": "ecf7833ff6d2f66e94b6954ebb4b9e389a3d2d8e",
+    "licenses/README.md": "7c5550dbc0c52968dbb99f1f327405345495f8b9"
+  },
+  "vendored_sha256": {
+    "LICENSE": "fc865778a6b35159b93bc87696464b295860a3ef299bc46e96ff44b316c1d756",
+    "NOTICE": "fdacf65446d40591cfd330b28261614f9f65e9b88d7e824445fe2a233ec0e514",
+    "fedscgen/FedScGen.py": "f2647205f3a49d6e1bd06daefdc839dfb9b0183a33fdfcd6aaf1118368729de3",
+    "fedscgen/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fedscgen/plots.py": "6077ba51d32b1048286704bc8b45ad656c3be4182bae9ea9e0cc71dbfba44630",
+    "fedscgen/r_utils.py": "6ccb3e7a18afc050a978f45b2c1e579ed960a4add530fa74c9a53538e77b5302",
+    "fedscgen/scgen_utils.py": "2e5b41f3fe1456861a799a5e6ab13af45b114ef8fd089dd85802adef463d79b2",
+    "fedscgen/utils.py": "f7c625d17fc87304a5593a726c7e58a666a8ed47bceea6ad6f9067215e6d540c",
+    "licenses/BSD-3-Clause-scgen_utils": "c4f9e642fb174c3e3bcbc69c32cc5f73439b2f8051af5c03476e351a56d88009",
+    "licenses/README.md": "b6ae290fcf5aae33e031bc0a30372bb0afc704bbc838efb957fd89f11c03d1f4"
+  },
+  "local_patch": "patches/single_machine.patch",
+  "local_patch_sha256": "d0cf9930cc5169c5d75a805be3d181ed039ce46702169398bf15c8e6b100c812",
+  "modified_upstream_files": [
+    "fedscgen/scgen_utils.py",
+    "fedscgen/utils.py"
+  ]
+}

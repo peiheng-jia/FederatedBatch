@@ -1,0 +1,41 @@
+schema_version: 1
+protocol: figure5_privacy_semihonest_v1
+figure2_config: configs/figure2.yaml
+figure2_results: results/final_summaries/figure2
+output_dir: results/reproduction/figure5/final_model_privacy
+seeds: [218, 394, 542, 639, 788, 814, 880]
+
+privacy_split:
+  train_fraction: 0.80
+  auxiliary_fraction: 0.10
+  nonmember_fraction: 0.10
+  preferred_strata: [client, batch, celltype]
+  sparse_stratum_minimum: 5
+
+reconstruction:
+  auxiliary_validation_fraction: 0.20
+  decoder_split_seed: 20260923
+  ridge_alphas: [0.01, 0.1, 1.0, 10.0, 100.0]
+  nearest_neighbor_k: [1, 5]
+  mlp_hidden_dims: [256, 512]
+  mlp_batch_size: 128
+  mlp_learning_rate: 0.001
+  mlp_weight_decay: 0.00001
+  mlp_max_epochs: 200
+  mlp_patience: 20
+  mlp_min_delta: 0.00001
+
+membership:
+  attack_split_seed: 20260923
+  attack_test_fraction: 0.50
+  logistic_max_iter: 2000
+  augmentation_seed: 5102026
+  augmentation_batch_size: 256
+  contrastive_temperature: 0.07
+  queue_density_cosine_threshold: 0.90
+  permutation_repeats: 20
+  evaluate_cumulative_transcript: true
+
+diagnostics:
+  confidence_level: 0.95
+  save_reconstruction_predictions: true

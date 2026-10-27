@@ -1,0 +1,37 @@
+diff --git a/fedscgen/scgen_utils.py b/fedscgen/scgen_utils.py
+index 48c9583..eaa135d 100644
+--- a/fedscgen/scgen_utils.py
++++ b/fedscgen/scgen_utils.py
+@@ -97,2 +97,8 @@ class CustomTrainer(vaeArithTrainer):
+-            self.model.cuda(device)  # put model to cuda(gpu)
+-        self.device = device
++            # Only move to CUDA if device is not CPU
++            if device is not None and device.type != 'cpu':
++                self.model.cuda(device)  # put model to cuda(gpu)
++            else:
++                self.model.to(device if device is not None else torch.device('cpu'))
++        else:
++            self.model.to(torch.device('cpu'))
++        self.device = device if device is not None else torch.device('cpu')
+diff --git a/fedscgen/utils.py b/fedscgen/utils.py
+index d71c3c7..f90c692 100644
+--- a/fedscgen/utils.py
++++ b/fedscgen/utils.py
+@@ -53,4 +53,4 @@ def set_seed(seed=None):
+-    crypten.init()
+-    cfg.debug.debug_mode = True
+-    crypten.manual_seed(seed, seed, seed)
+-    cfg.encoder.precision_bits = 32
++    # crypten.init()  # Disabled for single-machine setup
++    # cfg.debug.debug_mode = True  # Disabled for single-machine setup
++    # crypten.manual_seed(seed, seed, seed)  # Disabled for single-machine setup
++    # cfg.encoder.precision_bits = 32  # Disabled for single-machine setup
+@@ -68 +68,4 @@ def get_cuda_device(device_index: int):
+-    if torch.cuda.is_available():
++    # Support CPU mode when device_index is -1
++    if device_index == -1 or not torch.cuda.is_available():
++        return torch.device("cpu")
++    else:
+@@ -71,2 +73,0 @@ def get_cuda_device(device_index: int):
+-    else:
+-        return torch.device("cpu")

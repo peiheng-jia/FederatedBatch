@@ -1,0 +1,61 @@
+{
+  "dataset": "/mnt/h/code/FedCONCORD/FederatedBatch-Reproducibility/data/pancreas.h5ad",
+  "dataset_sha256": "97e6dfd65553e4d10aa3ef5d904362970a75c677c31d70fabc9234191a09db8c",
+  "features": "/mnt/h/code/FedCONCORD/FederatedBatch-FreshQueueDoseResponse/results/figure2_unified_7seed_original_environment_20260923/features.txt",
+  "features_sha256": "ff729379f06798ee96d232f3ff9d2263c56741abd78614b263440fe0f01458f2",
+  "figure1_3_4_5_modified": false,
+  "final_dp_source": "/mnt/h/code/FedCONCORD/FederatedBatch-FreshQueueDoseResponse/results/round_once_jointDP_multiseed_102",
+  "manuscript_modified": false,
+  "methods": [
+    "NoQueue",
+    "Remote A/B (sigma=0)",
+    "FederatedBatch"
+  ],
+  "noqueue_source": "/mnt/h/code/FedCONCORD/FederatedBatch-FreshQueueDoseResponse/results/figure2_unified_7seed_original_environment_20260923",
+  "old_vanilla_freshqueue_excluded_from_final_comparison": true,
+  "only_trained_method": "Remote A/B (sigma=0)",
+  "reference_protocol": {
+    "active_rounds": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "alpha": 0.1,
+    "joint_C": 1206.3391650512763,
+    "max_remote_participation": 1,
+    "mode": "RoundOnce exact A/B with joint cell-level clipping",
+    "remote_cells_per_source_active_round": 102,
+    "sigma": 0.0,
+    "tau_q": 0.2,
+    "unique_remote_cells_per_source": 1734
+  },
+  "reused_methods": [
+    "NoQueue",
+    "FederatedBatch"
+  ],
+  "scope": "Figure 2 reviewer-facing canonical-seven finalization",
+  "seeds": [
+    218,
+    394,
+    542,
+    639,
+    788,
+    814,
+    880
+  ],
+  "status": "PASS"
+}
