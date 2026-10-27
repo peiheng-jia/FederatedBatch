@@ -132,7 +132,9 @@ of concept.
 Use [CITATION.cff](CITATION.cff) for the software authors and manuscript title.
 Please also cite CONCORD and, when using its baseline, FedscGen; source links
 and the FedscGen publication DOI are in [third-party notices](THIRD_PARTY_LICENSES.md).
-No code-archive DOI is currently registered.
+The archived [v0.3.0 release](https://github.com/peiheng-jia/FederatedBatch/releases/tag/v0.3.0)
+is available on Zenodo: [10.5281/zenodo.23694614](https://doi.org/10.5281/zenodo.23694614)
+(published 27 October 2026).
 
 ## License
 

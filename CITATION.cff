@@ -14,4 +14,8 @@ authors:
   - family-names: Xiong
     given-names: Jinbo
 version: 0.3.0
+doi: 10.5281/zenodo.23694614
+date-released: 2026-10-27
+url: "https://github.com/peiheng-jia/FederatedBatch"
+repository-code: "https://github.com/peiheng-jia/FederatedBatch"
 license: MIT
